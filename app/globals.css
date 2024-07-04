@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import './custom.css';
 
 @layer utilities {
   .text-balance {
@@ -10,13 +11,14 @@
 @layer base{
   body {
       /* @apply dark:bg-[#0F151B] bg-[#f8f9fa] */
-      @apply dark:bg-[#0b0f13] bg-[#f8f9fa]
+      @apply dark:bg-[#0b0f13] bg-[#f8f9fa];
+      overflow-y: auto;
   }
 }
-.inter {
+.font-inter {
   font-family: var(--font-inter);
 }
 
-.lexend {
+.font-lexend {
   font-family: var(--font-lexend);
 }

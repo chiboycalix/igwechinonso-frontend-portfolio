@@ -27,7 +27,7 @@ const config: Config = withMT({
       "xl": "1280px",
       "2xl": "1440px",
       "3xl": "1536px",
-      "4xl": "1920px"
+      "4xl": "1962px"
     },
     fontSize: {
       "xs": "10px",
@@ -35,10 +35,11 @@ const config: Config = withMT({
       "md": "14px",
       "base": "16px",
       "lg": "28px",
-      "2xl": "36px",
+      "xl": "36px",
+      "2xl": "44px",
       "3xl": "48px",
-      "4xl": "54px",
-      "5xl": "76px",
+      "4xl": "52px",
+      "5xl": "60px",
     },
     colors: {
       secondary: "#828282",
@@ -67,6 +68,19 @@ const config: Config = withMT({
         '800': '#734a20',
         '900': '#623f21',
         '950': '#39200f',
+      },
+      cyan: {
+        '50': '#f0fdfa',
+        '100': '#cbfcf1',
+        '200': '#97f8e2',
+        '300': '#5bedd2',
+        '400': '#2ad7bc',
+        '500': '#12c7ae',
+        '600': '#0a9786',
+        '700': '#0d786d',
+        '800': '#105f58',
+        '900': '#124f49',
+        '950': '#03302e',
       }
     },
     extend: {
@@ -74,6 +88,18 @@ const config: Config = withMT({
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      lineHeight: {
+        'xs': '17px',
+        'sm':"20px",
+        'md':"24px",
+        "base":"28px",
+        "lg": "46px",
+        "xl": "58px",
+        "2xl": "69px",
+        "3xl": "75px",
+        "4xl": "81px",
+        "5xl": "93px"
       },
       animation: {
         "infinite-scroll": "infinite-scroll 10s linear infinite",

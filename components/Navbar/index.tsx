@@ -8,34 +8,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { Logo } from "@/assets/images"
 import { usePathname } from "next/navigation";
+import Title from "../Title";
+import { links } from "@/constants";
 
-const links = [
-  {
-    id: 1,
-    name: "Home",
-    path: "/"
-  },
-  {
-    id: 2,
-    name: "Works",
-    path: "/works"
-  },
-  {
-    id: 3,
-    name: "Blog",
-    path: "/blog"
-  },
-  {
-    id: 4,
-    name: "Service",
-    path: "/service"
-  },
-  {
-    id: 5,
-    name: "Contact",
-    path: "/contact"
-  }
-];
+
 const NavList = ({ isDarkMode, currentPath }: { isDarkMode: boolean; currentPath: string; }) => {
   return (
     <ul className="my-2 flex flex-col gap-2 md:mb-0 md:mt-0 md:flex-row md:items-center md:gap-6">
@@ -43,7 +19,7 @@ const NavList = ({ isDarkMode, currentPath }: { isDarkMode: boolean; currentPath
         links.map((link) => {
           return <Typography
             as="li"
-            className={`p-1 font-medium inter text-base ${isDarkMode ? "text-white" : "text-black"} ${currentPath === link.path ? 'text-primary-400 font-bold' : ''}`}
+            className={`p-1 font-medium font-inter text-base ${isDarkMode ? "text-white" : "text-black"} ${currentPath === link.path ? 'text-primary-400 font-bold' : ''}`}
             key={link.id}
           >
             <Link href={link.path} className="flex items-center hover:text-primary-500 transition-colors">
@@ -82,16 +58,19 @@ const NavbarComponent = () => {
   }, []);
 
   return (
-    <Navbar className="px-[1rem] xl:px-[5rem] py-3 max-w-full rounded-none shadow-sm border-none dark:bg-[#0F151B] bg-white">
-      <div className="flex items-center justify-between">
-        <Typography
-          as="a"
-          href="#"
-          variant="h6"
-          className="mr-4 cursor-pointer py-1.5"
-        >
-          <Image src={Logo} alt="portfolio logo" className="w-6 h-6" />
-        </Typography>
+    <Navbar className="fixed top-0 left-0 z-50 px-[1rem] xl:px-[5rem] py-3 max-w-full rounded-none shadow-sm border-none dark:bg-[#0F151B] bg-white">
+      <div className="flex items-center justify-between max-w-[1280px] mx-auto">
+        <div className="flex items-center">
+          <Typography
+            as="a"
+            href="#"
+            variant="h6"
+            className="mr-4 cursor-pointer py-1.5"
+          >
+            <Image src={Logo} alt="portfolio logo" className="w-[50px] h-[50px]" />
+          </Typography>
+          <Title as="h2" text="Chinonso" size="medium" className="dark:text-white text-black hidden sm:inline-block"/>
+        </div>
         <div className="hidden md:block">
           <NavList isDarkMode={isDarkMode} currentPath={currentPath} />
         </div>
