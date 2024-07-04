@@ -19,7 +19,10 @@ const ThemeSwitcher = () => {
   return (
     <div className="cursor-pointer">
       {
-        resolvedTheme === "light" ? <MoonIcon onClick={() => setTheme('dark')} className='w-5'/> : <SunIcon onClick={() => setTheme('light')} className='w-5 text-gray-500'/>
+        resolvedTheme === "light" ? <MoonIcon onClick={() => {
+          setTheme('dark')
+          localStorage.removeItem("theme")
+        }} className='w-5'/> : <SunIcon onClick={() => setTheme('light')} className='w-5 text-gray-500'/>
       }
     </div>
   );

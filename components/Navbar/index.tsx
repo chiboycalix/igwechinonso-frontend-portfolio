@@ -2,7 +2,7 @@
 import React from "react";
 import { Navbar, Collapse, Typography, IconButton } from "@/components/MaterialTailwind";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import ThemeSwitcher from "@/components/SwithThemeButton";
+import ThemeSwitcher from "@/components/SwitchThemeButton";
 import { useTheme } from 'next-themes';
 import Link from "next/link";
 import Image from "next/image";
@@ -38,7 +38,7 @@ const links = [
 ];
 const NavList = ({ isDarkMode, currentPath }: { isDarkMode: boolean; currentPath: string; }) => {
   return (
-    <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="my-2 flex flex-col gap-2 md:mb-0 md:mt-0 md:flex-row md:items-center md:gap-6">
       {
         links.map((link) => {
           return <Typography
@@ -82,7 +82,7 @@ const NavbarComponent = () => {
   }, []);
 
   return (
-    <Navbar className="px-6 py-3 max-w-full rounded-none shadow-sm border-none dark:bg-[#0F151B] bg-white">
+    <Navbar className="px-[1rem] xl:px-[5rem] py-3 max-w-full rounded-none shadow-sm border-none dark:bg-[#0F151B] bg-white">
       <div className="flex items-center justify-between">
         <Typography
           as="a"
@@ -92,12 +92,12 @@ const NavbarComponent = () => {
         >
           <Image src={Logo} alt="portfolio logo" className="w-6 h-6" />
         </Typography>
-        <div className="hidden lg:block">
+        <div className="hidden md:block">
           <NavList isDarkMode={isDarkMode} currentPath={currentPath} />
         </div>
         <IconButton
           variant="text"
-          className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+          className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent md:hidden"
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
         >

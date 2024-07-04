@@ -25,8 +25,9 @@ const config: Config = withMT({
       "md": "768px",
       "lg": "1024px",
       "xl": "1280px",
-      "2xl": "1445px",
+      "2xl": "1440px",
       "3xl": "1536px",
+      "4xl": "1920px"
     },
     fontSize: {
       "xs": "10px",
@@ -54,6 +55,19 @@ const config: Config = withMT({
         900: "#0d472e",
         950: "#06281b",
       },
+      hue: {
+        '50': '#fbf9eb',
+        '100': '#f5f0cc',
+        '200': '#ece19c',
+        '300': '#e1cb63',
+        '400': '#d7b438',
+        '500': '#c79e2b',
+        '600': '#af7f23',
+        '700': '#895c1f',
+        '800': '#734a20',
+        '900': '#623f21',
+        '950': '#39200f',
+      }
     },
     extend: {
       backgroundImage: {
