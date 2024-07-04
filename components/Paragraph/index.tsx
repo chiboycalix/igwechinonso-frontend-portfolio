@@ -15,7 +15,7 @@ const Paragraph = ({ text, size, className, as }: ParagraphProps) => {
   const medium = size === "medium" && "text-base leading-base"
   const small = size === "small" && "text-sm leading-sm"
   return (
-    <Typography as={as} className={cn(`dark:text-white text-black font-medium`, large, medium, small, className)}>{text}</Typography>
+    <Typography as={as} className={cn(`dark:text-white text-black font-medium font-inter`, large, medium, small, className)}>{text}</Typography>
   )
 }
 

@@ -1,4 +1,20 @@
-export const links = [
+import Webpack from "@/assets/images/tools/webpack.png";
+import Github from "@/assets/images/tools/Github.png";
+import Docker from "@/assets/images/tools/Docker.png";
+import ReactJs from "@/assets/images/tools/ReactJs.png";
+import TypeScript from "@/assets/images/tools/TypeScript.png";
+import Mongodb from "@/assets/images/tools/Mongodb.png";
+import Golang from "@/assets/images/tools/Golang.png";
+import NextJs from "@/assets/images/tools/NextJs.png";
+import NodeJs from "@/assets/images/tools/NodeJs.png";
+import Redux from "@/assets/images/tools/Redux.png";
+import Tailwind from "@/assets/images/tools/Tailwind.png";
+import Vscode from "@/assets/images/tools/vscode.png";
+import Javascript from "@/assets/images/tools/Javascript.png";
+import Framer from "@/assets/images/tools/Framer_White.png";
+
+
+const links = [
   {
     id: 1,
     name: "Home",
@@ -25,3 +41,21 @@ export const links = [
     path: "/contact",
   },
 ];
+
+export {
+  links,
+  Webpack,
+  Github,
+  ReactJs,
+  Docker,
+  TypeScript,
+  Mongodb,
+  Golang,
+  Vscode,
+  Javascript,
+  Framer,
+  Tailwind,
+  NextJs,
+  NodeJs,
+  Redux
+}
