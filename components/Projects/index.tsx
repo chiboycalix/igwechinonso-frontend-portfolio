@@ -12,42 +12,48 @@ const projects = [
     name: "Plumbit",
     src: Plumbit,
     isDesktop: true,
-    description:"A Platform that Simplifies workflow and amplify Success"
+    description:"A Platform that Simplifies workflow and amplify Success",
+    href:"https://plumbit.vercel.app"
   },
   {
     id: 2,
     name: "Approvam",
     src: Approvam,
     isDesktop: true,
-    description:"A Platform that Simplifies workflow and amplify Success"
+    description:"A Platform that Simplifies workflow and amplify Success",
+    href:"https://www.approvam.com/"
   },
   {
     id: 3,
     name: "SkillTease",
     src: SkillTease,
     isDesktop: true,
-    description:"A Platform that Simplifies workflow and amplify Success"
+    description:"A Platform that Simplifies workflow and amplify Success",
+    href:"https://script-tease.vercel.app/"
   },
   {
     id: 4,
     name: "Plumbit",
     src: Plumbit,
     isDesktop: true,
-    description:"A Platform that Simplifies workflow and amplify Success"
+    description:"A Platform that Simplifies workflow and amplify Success",
+    href:"https://plumbit.vercel.app"
   },
   {
     id: 5,
     name: "Approvam",
     src: Approvam,
     isDesktop: true,
-    description:"A Platform that Simplifies workflow and amplify Success"
+    description:"A Platform that Simplifies workflow and amplify Success",
+     href:"https://www.approvam.com/"
   },
   {
     id: 6,
     name: "SkillTease",
     src: SkillTease,
     isDesktop: true,
-    description:"A Platform that Simplifies workflow and amplify Success"
+    description:"A Platform that Simplifies workflow and amplify Success",
+    href:"https://script-tease.vercel.app/"
   }
 ];
 
@@ -58,11 +64,12 @@ type ProjectProps = {
     src: any;
     isDesktop: boolean;
     description: string;
+    href:string;
   }
 }
 
 const Project = ({ project }: ProjectProps) => {
-  const { isDesktop, src, name, description } = project
+  const { isDesktop, src, name, description, href } = project
   return <div className='shadow-lg dark:bg-[#0f151b] rounded-lg'>
     <Image
       src={src}
@@ -94,7 +101,7 @@ const Project = ({ project }: ProjectProps) => {
           text={isDesktop ? "Desktop App" : "Mobile App"}
           className=''
         />
-        <Link href="#" target='_blank' className='bg-primary-100 hover:bg-primary-200 px-3 py-[2px] rounded'>
+        <Link href={href} target='_blank' className='bg-primary-100 hover:bg-primary-200 px-3 py-[2px] rounded'>
           <Paragraph
             as="p"
             size='small'
