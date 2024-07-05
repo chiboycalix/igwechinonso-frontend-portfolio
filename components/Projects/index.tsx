@@ -27,6 +27,27 @@ const projects = [
     src: ProjectOne,
     isDesktop: true,
     description:"A Platform that Simplifies workflow and amplify Success"
+  },
+  {
+    id: 4,
+    name: "Approvam",
+    src: ProjectOne,
+    isDesktop: true,
+    description:"A Platform that Simplifies workflow and amplify Success"
+  },
+  {
+    id: 5,
+    name: "Approvam",
+    src: ProjectOne,
+    isDesktop: true,
+    description:"A Platform that Simplifies workflow and amplify Success"
+  },
+  {
+    id: 6,
+    name: "Approvam",
+    src: ProjectOne,
+    isDesktop: true,
+    description:"A Platform that Simplifies workflow and amplify Success"
   }
 ];
 
@@ -42,7 +63,7 @@ type ProjectProps = {
 
 const Project = ({ project }: ProjectProps) => {
   const { isDesktop, src, name, description } = project
-  return <div className='shadow-lg'>
+  return <div className='shadow-lg dark:bg-[#0f151b] rounded-lg'>
     <Image
       src={src}
       alt={name}
@@ -78,7 +99,7 @@ const Project = ({ project }: ProjectProps) => {
             as="p"
             size='small'
             text="visit"
-            className='text-primary-500 font-bold'
+            className='text-primary-500 font-bold dark:text-primary-500'
           />
         </Link>
       </div>
@@ -89,7 +110,7 @@ const Projects = () => {
   return (
     <div className='custom-wrapper my-[5rem]'>
       <Title text="My latest work" size='small' className='lg:w-[70%] w-full' as="h2" />
-      <div className='grid md:grid-cols-3 grid-cols-1 gap-10 mt-[1rem]'>
+      <div className='grid md:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-10 mt-[1rem]'>
         {projects.map((project, idx) => {
           return <Project project={project} key={idx} />
         })}

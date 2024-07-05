@@ -15,6 +15,8 @@ import Framer from "@/assets/images/tools/Framer_White.png";
 import ProjectOne from "@/assets/images/projects/ProjectOne.png";
 import DesktopIcon from "@/assets/images/projects/DesktopIcon.png";
 import MobileIcon from "@/assets/images/projects/MobileIcon.png";
+import Linkedin from "@/assets/images/socials/Linkedin.png"
+import Twitter from "@/assets/images/socials/Twitter.png"
 
 
 const links = [
@@ -63,5 +65,7 @@ export {
   Redux,
   ProjectOne,
   DesktopIcon,
-  MobileIcon
+  MobileIcon,
+  Linkedin,
+  Twitter
 }

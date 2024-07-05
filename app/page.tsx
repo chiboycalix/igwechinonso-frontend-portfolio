@@ -2,6 +2,7 @@ import Banner from "@/components/Banner";
 import Projects from "@/components/Projects";
 import Services from "@/components/Services";
 import Tools from "@/components/Tools";
+import WorkWithUs from "@/components/WorkWithUs";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Services />
       <Tools />
       <Projects />
+      <WorkWithUs />
     </main>
   );
 }

@@ -2,19 +2,19 @@
 import React from "react";
 import { Navbar, Collapse, Typography, IconButton } from "@/components/MaterialTailwind";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import ThemeSwitcher from "@/components/SwitchThemeButton";
 import { useTheme } from 'next-themes';
-import Link from "next/link";
-import Image from "next/image";
-import { Logo } from "@/assets/images"
 import { usePathname } from "next/navigation";
-import Title from "../Title";
 import { links } from "@/constants";
+import ThemeSwitcher from "@/components/SwitchThemeButton";
+import LogoComponent from "@/components/Logo";
+import Link from "next/link";
+import { cn } from "@/utils/cn";
 
 
-const NavList = ({ isDarkMode, currentPath }: { isDarkMode: boolean; currentPath: string; }) => {
+export const NavList = ({ isDarkMode, currentPath, isFooter }: { isDarkMode: boolean; currentPath: string;isFooter?:boolean }) => {
+  const footerStyle = isFooter ? "2xs:flex-row flex-wrap" : "flex-col"
   return (
-    <ul className="my-2 flex flex-col gap-2 md:mb-0 md:mt-0 md:flex-row md:items-center md:gap-6">
+    <ul className={cn("my-2 flex gap-2 md:mb-0 md:mt-0 md:flex-row md:items-center md:gap-6", footerStyle)}>
       {
         links.map((link) => {
           return <Typography
@@ -60,17 +60,7 @@ const NavbarComponent = () => {
   return (
     <Navbar className="fixed top-0 left-0 z-50 px-[1rem] xl:px-[5rem] py-3 max-w-full rounded-none shadow-sm border-none dark:bg-[#0F151B] bg-white">
       <div className="flex items-center justify-between max-w-[1280px] mx-auto">
-        <div className="flex items-center">
-          <Typography
-            as="a"
-            href="#"
-            variant="h6"
-            className="mr-4 cursor-pointer py-1.5"
-          >
-            <Image src={Logo} alt="portfolio logo" className="w-[50px] h-[50px]" />
-          </Typography>
-          <Title as="h2" text="Chinonso" size="medium" className="dark:text-white text-black hidden sm:inline-block"/>
-        </div>
+        <LogoComponent />
         <div className="hidden md:block">
           <NavList isDarkMode={isDarkMode} currentPath={currentPath} />
         </div>

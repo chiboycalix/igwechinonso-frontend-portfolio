@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { Inter, Lexend } from "next/font/google";
 import { Providers } from '@/app/providers';
 import NavbarComponent from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import "./globals.css";
+import Copyright from "@/components/Copyright";
 
-// const inter = Inter({ subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const lexend = Lexend({ subsets: ["latin"], variable: "--font-lexend" });
 export const metadata: Metadata = {
@@ -23,6 +24,8 @@ export default function RootLayout({
         <Providers>
           <NavbarComponent />
           <div>{children}</div>
+          <Footer />
+          <Copyright />
         </Providers>
       </body>
     </html>
