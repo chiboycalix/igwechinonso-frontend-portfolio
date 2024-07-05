@@ -58,7 +58,7 @@ const NavbarComponent = () => {
   }, []);
 
   return (
-    <Navbar className="fixed top-0 left-0 z-100 px-[1rem] xl:px-[5rem] py-3 max-w-full rounded-none shadow-sm border-none dark:bg-[#0F151B] bg-white">
+    <Navbar className="fixed top-0 left-0 z-[90000] px-[1rem] xl:px-[5rem] py-3 max-w-full rounded-none shadow-sm border-none dark:bg-[#0F151B] bg-white">
       <div className="flex items-center justify-between max-w-[1280px] mx-auto">
         <LogoComponent />
         <div className="hidden md:block">

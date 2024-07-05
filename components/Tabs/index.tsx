@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
+import Paragraph from "../Paragraph";
 
 type Tab = {
   title: string;
@@ -62,15 +63,18 @@ const Tabs = ({
                 layoutId="clickedbutton"
                 transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
                 className={cn(
-                  "absolute inset-0 bg-gray-200 dark:bg-zinc-800 rounded-full ",
+                  "absolute inset-0 bg-primary-100 dark:bg-zinc-800 rounded-full ",
                   activeTabClassName
                 )}
               />
             )}
+            <Paragraph
+              as="p"
+              size='medium'
+              text={tab.title}
+              className='text-black dark:text-white relative block'
+            />
 
-            <span className="relative block text-black dark:text-white">
-              {tab.title}
-            </span>
           </button>
         ))}
       </div>
@@ -79,7 +83,7 @@ const Tabs = ({
         active={active}
         key={active.value}
         hovering={hovering}
-        className={cn("mt-32", contentClassName)}
+        className={cn("mt-[3rem]", contentClassName)}
       />
     </>
   );
@@ -100,7 +104,7 @@ export const FadeInDiv = ({
     return tab.value === tabs[0].value;
   };
   return (
-    <div className="relative w-full h-[800px] mb-[10rem]">
+    <div className="relative w-full h-[800px] mb-[15rem]">
       {tabs.map((tab, idx) => (
         <motion.div
           key={tab.value}

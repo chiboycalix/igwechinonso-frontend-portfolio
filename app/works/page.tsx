@@ -21,7 +21,7 @@ const tabs = [
     title: "Product",
     value: "product",
     content: (
-      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-primary-300">
         <p>Product Tab</p>
         <DummyContent />
       </div>
@@ -31,7 +31,7 @@ const tabs = [
     title: "Services",
     value: "services",
     content: (
-      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-primary-300">
         <p>Services tab</p>
         <DummyContent />
       </div>
@@ -41,28 +41,8 @@ const tabs = [
     title: "Playground",
     value: "playground",
     content: (
-      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-primary-300">
         <p>Playground tab</p>
-        <DummyContent />
-      </div>
-    ),
-  },
-  {
-    title: "Content",
-    value: "content",
-    content: (
-      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-        <p>Content tab</p>
-        <DummyContent />
-      </div>
-    ),
-  },
-  {
-    title: "Random",
-    value: "random",
-    content: (
-      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-        <p>Random tab</p>
         <DummyContent />
       </div>
     ),
@@ -73,8 +53,8 @@ const Works = () => {
   return (
     <div className='w-full'>
       <WorksCTA />
-      <div className='custom-wrapper mt-[5rem]'>
-       <Tabs tabs={tabs} />
+      <div className='custom-wrapper mt-[1rem]'>
+       <Tabs tabs={tabs} activeTabClassName='font-bold'/>
       </div>
     </div>
   )
