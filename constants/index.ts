@@ -12,7 +12,9 @@ import Tailwind from "@/assets/images/tools/Tailwind.png";
 import Vscode from "@/assets/images/tools/vscode.png";
 import Javascript from "@/assets/images/tools/Javascript.png";
 import Framer from "@/assets/images/tools/Framer_White.png";
-import ProjectOne from "@/assets/images/projects/ProjectOne.png";
+import Plumbit from "@/assets/images/projects/Plumbit.png";
+import Approvam from "@/assets/images/projects/Approvam.png";
+import SkillTease from "@/assets/images/projects/SkillTease.png";
 import DesktopIcon from "@/assets/images/projects/DesktopIcon.png";
 import MobileIcon from "@/assets/images/projects/MobileIcon.png";
 import Linkedin from "@/assets/images/socials/Linkedin.png"
@@ -63,9 +65,11 @@ export {
   NextJs,
   NodeJs,
   Redux,
-  ProjectOne,
+  Plumbit,
   DesktopIcon,
   MobileIcon,
   Linkedin,
-  Twitter
+  Twitter,
+  Approvam,
+  SkillTease
 }

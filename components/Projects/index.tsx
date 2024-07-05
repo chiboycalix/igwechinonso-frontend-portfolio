@@ -1,7 +1,7 @@
 import React from 'react';
 import Title from '@/components/Title';
 import Image from 'next/image';
-import { ProjectOne, MobileIcon, DesktopIcon } from '@/constants';
+import { Plumbit, MobileIcon, DesktopIcon, Approvam, SkillTease } from '@/constants';
 import Paragraph from '../Paragraph';
 import Link from 'next/link';
 import Button from '@/components/Button';
@@ -9,43 +9,43 @@ import Button from '@/components/Button';
 const projects = [
   {
     id: 1,
-    name: "Approvam",
-    src: ProjectOne,
+    name: "Plumbit",
+    src: Plumbit,
     isDesktop: true,
     description:"A Platform that Simplifies workflow and amplify Success"
   },
   {
     id: 2,
     name: "Approvam",
-    src: ProjectOne,
+    src: Approvam,
     isDesktop: true,
     description:"A Platform that Simplifies workflow and amplify Success"
   },
   {
     id: 3,
-    name: "Approvam",
-    src: ProjectOne,
+    name: "SkillTease",
+    src: SkillTease,
     isDesktop: true,
     description:"A Platform that Simplifies workflow and amplify Success"
   },
   {
     id: 4,
-    name: "Approvam",
-    src: ProjectOne,
+    name: "Plumbit",
+    src: Plumbit,
     isDesktop: true,
     description:"A Platform that Simplifies workflow and amplify Success"
   },
   {
     id: 5,
     name: "Approvam",
-    src: ProjectOne,
+    src: Approvam,
     isDesktop: true,
     description:"A Platform that Simplifies workflow and amplify Success"
   },
   {
     id: 6,
-    name: "Approvam",
-    src: ProjectOne,
+    name: "SkillTease",
+    src: SkillTease,
     isDesktop: true,
     description:"A Platform that Simplifies workflow and amplify Success"
   }
@@ -67,7 +67,7 @@ const Project = ({ project }: ProjectProps) => {
     <Image
       src={src}
       alt={name}
-      className=''
+      className='rounded-t-lg'
     />
     <div className='p-4'>
       <Image
