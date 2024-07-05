@@ -12,6 +12,9 @@ import Tailwind from "@/assets/images/tools/Tailwind.png";
 import Vscode from "@/assets/images/tools/vscode.png";
 import Javascript from "@/assets/images/tools/Javascript.png";
 import Framer from "@/assets/images/tools/Framer_White.png";
+import ProjectOne from "@/assets/images/projects/ProjectOne.png";
+import DesktopIcon from "@/assets/images/projects/DesktopIcon.png";
+import MobileIcon from "@/assets/images/projects/MobileIcon.png";
 
 
 const links = [
@@ -57,5 +60,8 @@ export {
   Tailwind,
   NextJs,
   NodeJs,
-  Redux
+  Redux,
+  ProjectOne,
+  DesktopIcon,
+  MobileIcon
 }

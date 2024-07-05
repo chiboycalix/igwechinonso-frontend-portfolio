@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner";
+import Projects from "@/components/Projects";
 import Services from "@/components/Services";
 import Tools from "@/components/Tools";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <Banner />
       <Services />
       <Tools />
+      <Projects />
     </main>
   );
 }
