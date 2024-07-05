@@ -58,14 +58,14 @@ const Banner = () => {
             size='large'
             as="h2"
           />
-          <div className='flex items-center justify-between bg-white dark:bg-[#0f151b] sm:p-4 p-1 mx-auto lg:mx-0 rounded-md shadow-lg mt-[3rem] sm:w-[90%] w-full'>
+          <div className='flex flex-col xs:flex-row items-center justify-between bg-white dark:bg-[#0f151b] p-5 mx-auto lg:mx-0 rounded-md shadow-lg mt-[3rem] w-full'>
             {
               bannerCardData.map((item, idx) => {
                 return <BannerCard item={item} key={idx} />
               })
             }
           </div>
-          <div className='w-[20%] mt-[3rem]'>
+          <div className='md:w-[20%] sm:w-[30%] w-full mt-[3rem]'>
             <Button caption="Let's talk" className='bg-primary-500 text-white hover:bg-primary-400' />
           </div>
         </div>
