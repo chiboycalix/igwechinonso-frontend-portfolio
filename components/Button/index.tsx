@@ -4,11 +4,11 @@ import React from 'react'
 type ButtonProps = {
   caption: string;
   className?: any;
-  variant: string;
+  variant?: string;
 }
 const Button = ({ caption, className, variant }: ButtonProps) => {
   return (
-    <button className={cn("w-full cursor-pointer", variant, className)}>{caption}</button>
+    <button className={cn("w-full cursor-pointer px-[20px] py-[14px] rounded font-bold", variant, className)}>{caption}</button>
   )
 }
 

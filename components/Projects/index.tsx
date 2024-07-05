@@ -101,7 +101,7 @@ const Project = ({ project }: ProjectProps) => {
           text={isDesktop ? "Desktop App" : "Mobile App"}
           className=''
         />
-        <Link href={href} target='_blank' className='bg-primary-100 hover:bg-primary-200 px-3 py-[2px] rounded'>
+        <Link href={href} target='_blank' className='bg-primary-100 hover:bg-primary-200 px-3 py-[2px]'>
           <Paragraph
             as="p"
             size='small'
@@ -123,7 +123,7 @@ const Projects = () => {
         })}
       </div>
       <div className='mx-auto sm:max-w-[25%] w-full mt-[2rem]'>
-        <Button caption='View more projects' className="font-bold rounded text-sm px-4 py-4" variant='bg-primary-100 hover:bg-primary-200 text-primary-500'/>
+        <Button caption='View more projects' className="font-bold text-sm" variant='bg-primary-100 hover:bg-primary-200 text-primary-500'/>
       </div>
     </div>
   )

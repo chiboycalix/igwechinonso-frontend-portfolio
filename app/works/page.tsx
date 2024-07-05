@@ -1,8 +1,11 @@
+import WorksCTA from '@/components/WorksCTA'
 import React from 'react'
 
 const Works = () => {
   return (
-    <div>Works</div>
+    <div className='w-full'>
+      <WorksCTA />
+    </div>
   )
 }
 
