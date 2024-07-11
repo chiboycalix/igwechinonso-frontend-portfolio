@@ -6,12 +6,12 @@ import Paragraph from '../Paragraph';
 import Link from 'next/link';
 import Button from '@/components/Button';
 
-const projects = [
+export const projects = [
   {
     id: 1,
     name: "Plumbit",
     src: Plumbit,
-    isDesktop: true,
+    isDesktop: false,
     description:"A Platform that Simplifies workflow and amplify Success",
     href:"https://plumbit.vercel.app"
   },
@@ -68,15 +68,15 @@ type ProjectProps = {
   }
 }
 
-const Project = ({ project }: ProjectProps) => {
+export const Project = ({ project }: ProjectProps) => {
   const { isDesktop, src, name, description, href } = project
-  return <div className='shadow-lg dark:bg-[#0f151b] rounded-lg'>
+  return <div className='shadow-lg dark:bg-[#0f151b] bg-white rounded-lg'>
     <Image
       src={src}
       alt={name}
       className='rounded-t-lg'
     />
-    <div className='p-4'>
+    <div className='p-4 border-t border-gray-300'>
       <Image
         src={isDesktop ? DesktopIcon : MobileIcon}
         alt={isDesktop ? "DesktopIcon" : "MobileIcon"}

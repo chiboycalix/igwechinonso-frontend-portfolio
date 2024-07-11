@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${lexend.variable}`}>
         <Providers>
           <NavbarComponent />
-          <div>{children}</div>
+          <div className="min-h-screen">{children}</div>
           <Footer />
           <Copyright />
         </Providers>
