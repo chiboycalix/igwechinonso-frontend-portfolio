@@ -63,7 +63,7 @@ const Tabs = ({
                 layoutId="clickedbutton"
                 transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
                 className={cn(
-                  "absolute inset-0 bg-primary-100 dark:bg-zinc-800 rounded-full ",
+                  "absolute inset-0 bg-primary-100 dark:bg-[#0F151B] rounded-full ",
                   activeTabClassName
                 )}
               />
@@ -72,7 +72,7 @@ const Tabs = ({
               as="p"
               size='medium'
               text={tab.title}
-              className='text-black dark:text-white relative block'
+              className='text-black relative block'
             />
 
           </button>

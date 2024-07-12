@@ -2,6 +2,7 @@ import Tabs from '@/components/Tabs'
 import WorksCTA from '@/components/WorksCTA'
 import React from 'react';
 import { Project, projects } from '@/components/Projects';
+import AnimateIntoView from '@/components/AnimateIntoView';
 
 const desktopApps = projects.filter((project) => project.isDesktop);
 const mobileApps = projects.filter((project) => !project.isDesktop)
@@ -14,7 +15,7 @@ const tabs = [
       <div className="w-full bg-primary-500 p-5 rounded-2xl min-h-screen">
         <div className='grid grid-cols-3 gap-10'>
           {desktopApps.map((desktopApp, idx) => {
-            return <Project project={desktopApp} key={idx} />
+            return <AnimateIntoView key={idx} from='bottom' duration={0.3}><Project project={desktopApp} /></AnimateIntoView>
           })}
         </div>
       </div>
@@ -27,7 +28,7 @@ const tabs = [
       <div className="w-full bg-primary-500 p-5 rounded-2xl min-h-screen">
         <div className='grid grid-cols-3 gap-10'>
           {mobileApps.map((mobileApp, idx) => {
-            return <Project project={mobileApp} key={idx} />
+            return <AnimateIntoView key={idx} from='bottom' duration={0.6}><Project project={mobileApp} /></AnimateIntoView>
           })}
         </div>
         {mobileApps.length === 0 && <div>No App</div>}

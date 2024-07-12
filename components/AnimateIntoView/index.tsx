@@ -14,13 +14,12 @@ type AnimateIntoViewProps = {
   children: React.ReactNode;
   from: "left" | "right" | "top" | "bottom";
   duration: number;
+  threshold?: number;
 }
 
-const AnimateIntoView = ({ children, from, duration }: AnimateIntoViewProps) => {
+const AnimateIntoView = ({ children, from, duration, threshold = 0.1 }: AnimateIntoViewProps) => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({
-    threshold: 0.5,
-  });
+  const [ref, inView] = useInView({ threshold });
 
   React.useEffect(() => {
     if (inView) {

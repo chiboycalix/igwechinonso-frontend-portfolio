@@ -4,6 +4,7 @@ import { BlogOne, Second, Third, Fourth, Fifth, Sixth, Seventh } from '@/constan
 import React from 'react'
 import Date from '@/components/Date'
 import ImageHover from '@/components/ImageHover'
+import AnimateIntoView from '@/components/AnimateIntoView'
 
 type BlogProps = {
   blog: {
@@ -52,7 +53,7 @@ const blogs = [
   }
 ];
 const Blog = ({ blog }: BlogProps) => {
-  return <div>
+  return <AnimateIntoView from='bottom' duration={0.6}>
     <ImageHover src={blog.src} />
 
     <Paragraph
@@ -62,36 +63,40 @@ const Blog = ({ blog }: BlogProps) => {
       className='text-left font-bold hover:text-primary-500 cursor-pointer'
     />
     <Date hasIcon date={blog.date} className='text-secondary' />
-  </div>
+  </AnimateIntoView>
 }
 const Blogs = () => {
   return (
     <div className='custom-wrapper mt-[8rem] py-[2rem]'>
       <div className='w-full flex items-center justify-between gap-[2rem]'>
         <div className='basis-[50%]'>
-          <ImageHover src={BlogOne} />
+          <AnimateIntoView from='bottom' duration={0.6}>
+            <ImageHover src={BlogOne} />
+          </AnimateIntoView>
         </div>
 
         <div className='flex-1'>
-          <div className='w-[70%]'>
-            <Title
-              text="Lorem ipsum dolor sit amet, sectetur adipiscing elit"
-              size='large'
-              as="h2"
-              className='hover:text-primary-500 cursor-pointer 2xl:leading-[60px]'
-            />
-          </div>
-          <div className='w-[60%] my-[2rem]'>
-            <Paragraph
-              as="p"
-              size='small'
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-              className='text-left text-secondary hover:text-primary-500 cursor-pointer'
-            />
-          </div>
-          <div>
-            <Date hasIcon date='01 / 04 / 2022' className='text-secondary' />
-          </div>
+          <AnimateIntoView from='bottom' duration={0.8}>
+            <div className='w-[70%]'>
+              <Title
+                text="Lorem ipsum dolor sit amet, sectetur adipiscing elit"
+                size='large'
+                as="h2"
+                className='hover:text-primary-500 cursor-pointer 2xl:leading-[60px]'
+              />
+            </div>
+            <div className='w-[60%] my-[2rem]'>
+              <Paragraph
+                as="p"
+                size='small'
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+                className='text-left text-secondary hover:text-primary-500 cursor-pointer'
+              />
+            </div>
+            <div>
+              <Date hasIcon date='01 / 04 / 2022' className='text-secondary' />
+            </div>
+          </AnimateIntoView>
         </div>
       </div>
 

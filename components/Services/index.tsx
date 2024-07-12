@@ -3,6 +3,7 @@ import Title from '@/components/Title';
 import Paragraph from '@/components/Paragraph';
 import { CodeBracketIcon } from '@heroicons/react/16/solid';
 import { cn } from '@/utils/cn';
+import AnimateIntoView from '../AnimateIntoView';
 
 const services = [
   {
@@ -38,7 +39,7 @@ type ServiceProps = {
 }
 
 const Service = ({ service }: ServiceProps) => {
-  return <div className={cn(`bg-white dark:bg-[#0F151B] shadow-lg rounded-lg p-8`)}>
+  return <div className={cn(`bg-white dark:bg-[#0F151B] shadow-lg rounded-lg p-8 transform transition-transform duration-300 hover:scale-110`)}>
     <div className='flex justify-between mb-[1rem]'>
       <div className={cn(`w-[80px] h-[80px] flex items-center justify-center rounded-full`, service.bgColor)}>
         <CodeBracketIcon className={cn('w-6')} />
@@ -70,7 +71,7 @@ const Services = () => {
       <div className='mt-[4rem]'>
         <div className='grid md:grid-cols-3 grid-cols-1 gap-10'>
           {services.map((service, idx) => {
-            return <Service service={service} key={idx} />
+            return <AnimateIntoView key={idx} from="bottom" threshold={0.8} duration={idx === 0 ? 0.4 : idx === 1 ? 0.6 : 0.8}><Service service={service} /></AnimateIntoView>
           })}
         </div>
       </div>
