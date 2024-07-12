@@ -1,7 +1,9 @@
 import React from 'react'
 import Title from '@/components/Title';
 import Paragraph from '@/components/Paragraph';
-import Button from '../Button';
+import Button from '@/components/Button';
+import User from '@/components/User';
+import AnimateIntoView from '@/components/AnimateIntoView';
 
 
 const bannerCardData = [
@@ -50,27 +52,31 @@ const BannerCard = ({ item }: BannerCardProps) => {
 
 const Banner = () => {
   return (
-    <div className='custom-wrapper mt-[5rem]'>
-      <div className='flex items-center justify-between flex-col lg:flex-row'>
+    <div className='custom-wrapper mt-[10rem]'>
+      <div className='flex items-start justify-between flex-col lg:flex-row'>
         <div className='basis-1/2 text-center lg:text-left'>
-          <Title
-            text="Skilled in Frontend Development, Enthusiastic About Building Seamless Digital Experiences."
-            size='large'
-            as="h2"
-          />
-          <div className='flex flex-col xs:flex-row items-center justify-between bg-white dark:bg-[#0f151b] p-5 mx-auto lg:mx-0 rounded-md shadow-lg mt-[3rem] w-full'>
-            {
-              bannerCardData.map((item, idx) => {
-                return <BannerCard item={item} key={idx} />
-              })
-            }
-          </div>
-          <div className='md:w-[20%] sm:w-[30%] w-full mt-[3rem]'>
-            <Button caption="Let's talk" className='bg-primary-500 text-white hover:bg-primary-400' />
-          </div>
+          <AnimateIntoView from='left' duration={0.9}>
+            <Title
+              text="Skilled in Frontend Development, Enthusiastic About Building Seamless Digital Experiences."
+              size='large'
+              as="h2"
+            />
+            <AnimateIntoView from='left' duration={0.6}>
+              <div className='flex flex-col xs:flex-row items-center justify-between bg-white dark:bg-[#0f151b] p-5 mx-auto lg:mx-0 rounded-md shadow-lg mt-[3rem] w-full'>
+                {
+                  bannerCardData.map((item, idx) => {
+                    return <BannerCard item={item} key={idx} />
+                  })
+                }
+              </div>
+            </AnimateIntoView>
+            <div className='md:w-[20%] sm:w-[30%] w-full mt-[3rem]'>
+              <Button caption="Let's talk" className='bg-primary-500 text-white hover:bg-primary-400' />
+            </div>
+          </AnimateIntoView>
         </div>
         <div className='flex-1'>
-
+          <User />
         </div>
       </div>
     </div>

@@ -26,6 +26,12 @@ import Fourth from "@/assets/images/blogs/Fourth.png";
 import Fifth from "@/assets/images/blogs/Fifth.png";
 import Sixth from "@/assets/images/blogs/Sixth.png";
 import Seventh from "@/assets/images/blogs/Seventh.png";
+import Layer from "@/assets/images/Objects/Layer.png";
+import Polygon from "@/assets/images/Objects/Polygon.png";
+import Rectangle from "@/assets/images/Objects/Rectangle.png";
+import Rectangle163 from "@/assets/images/Objects/Rectangle163.png";
+import Ellipsis from "@/assets/images/Objects/Ellipse.png";
+import Subtract from "@/assets/images/Objects/Subtract.png";
 
 const links = [
   {
@@ -85,4 +91,10 @@ export {
   Fifth,
   Seventh,
   Sixth,
+  Layer,
+  Polygon,
+  Rectangle,
+  Rectangle163,
+  Ellipsis,
+  Subtract,
 };
