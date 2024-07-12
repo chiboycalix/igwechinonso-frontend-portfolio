@@ -17,9 +17,15 @@ import Approvam from "@/assets/images/projects/Approvam.png";
 import SkillTease from "@/assets/images/projects/SkillTease.png";
 import DesktopIcon from "@/assets/images/projects/DesktopIcon.png";
 import MobileIcon from "@/assets/images/projects/MobileIcon.png";
-import Linkedin from "@/assets/images/socials/Linkedin.png"
-import Twitter from "@/assets/images/socials/Twitter.png"
-
+import Linkedin from "@/assets/images/socials/Linkedin.png";
+import Twitter from "@/assets/images/socials/Twitter.png";
+import BlogOne from "@/assets/images/blogs/First.png";
+import Second from "@/assets/images/blogs/Second.png";
+import Third from "@/assets/images/blogs/Third.png";
+import Fourth from "@/assets/images/blogs/Fourth.png";
+import Fifth from "@/assets/images/blogs/Fifth.png";
+import Sixth from "@/assets/images/blogs/Sixth.png";
+import Seventh from "@/assets/images/blogs/Seventh.png";
 
 const links = [
   {
@@ -71,5 +77,12 @@ export {
   Linkedin,
   Twitter,
   Approvam,
-  SkillTease
-}
+  SkillTease,
+  BlogOne,
+  Second,
+  Third,
+  Fourth,
+  Fifth,
+  Seventh,
+  Sixth,
+};
