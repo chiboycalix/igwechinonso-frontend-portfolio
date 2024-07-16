@@ -5,12 +5,6 @@ import AnimateIntoView from '@/components/AnimateIntoView';
 import RotatingIntoView from '@/components/RotateIntoView';
 
 const User = () => {
-  const polygonRotation = {
-    left: { initial: { rotate: 0 }, animate: { rotate: 0, } },
-    right: { initial: { rotate: -50, x: -150, y: 50 }, animate: { rotate: 0, x: 0, y: 0 } },
-    top: { initial: { rotate: 0 }, animate: { rotate: 0 } },
-    bottom: { initial: { rotate: 0 }, animate: { rotate: 0 } },
-  };
   const rectangle163Rotation = {
     left: { initial: { rotate: 0 }, animate: { rotate: 0, } },
     right: { initial: { rotate: 50, x: 150, y: 50 }, animate: { rotate: 0, x: 0, y: 0 } },
@@ -32,7 +26,7 @@ const User = () => {
   };
 
   return (
-    <div className='relative w-full'>
+    <div className='relative w-full h-screen mx-auto text-center'>
       <div className='absolute top-0 left-0'>
         <RotatingIntoView from='right' duration={0.6} rotations={subtractRotation}>
           <Image src={Subtract} alt='Subtract' />
@@ -53,11 +47,7 @@ const User = () => {
           <Image src={Rectangle163} alt="Rectangle163" />
         </RotatingIntoView>
       </div>
-      <div className='absolute top-[490px] -left-[100px]'>
-        <RotatingIntoView from='right' duration={0.6} rotations={polygonRotation}>
-          <Image src={Polygon} alt="Polygon" />
-        </RotatingIntoView>
-      </div>
+
     </div>
   )
 }

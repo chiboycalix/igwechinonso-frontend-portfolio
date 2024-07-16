@@ -4,6 +4,9 @@ import Paragraph from '@/components/Paragraph';
 import Button from '@/components/Button';
 import User from '@/components/User';
 import AnimateIntoView from '@/components/AnimateIntoView';
+import RotatingIntoView from '../RotateIntoView';
+import Image from 'next/image';
+import { Polygon } from '@/constants';
 
 
 const bannerCardData = [
@@ -50,6 +53,14 @@ const BannerCard = ({ item }: BannerCardProps) => {
   </div>
 }
 
+const polygonRotation = {
+  left: { initial: { rotate: 0 }, animate: { rotate: 0, } },
+  right: { initial: { rotate: -50, x: -150, y: 50 }, animate: { rotate: 0, x: 0, y: 0 } },
+  top: { initial: { rotate: 0 }, animate: { rotate: 0 } },
+  bottom: { initial: { rotate: 0 }, animate: { rotate: 0 } },
+};
+
+
 const Banner = () => {
   return (
     <div className='custom-wrapper mt-[10rem]'>
@@ -70,16 +81,23 @@ const Banner = () => {
                 }
               </div>
             </AnimateIntoView>
-            <div className='md:w-[20%] sm:w-[30%] w-full mt-[3rem]'>
-              <Button caption="Let's talk" className='bg-primary-500 text-white hover:bg-primary-400' />
+            <div className='flex items-start sm:flex-row flex-col justify-between mt-[3rem]'>
+              <div className='md:w-[20%] sm:w-[30%] w-full'>
+                <Button caption="Let's talk" className='bg-primary-500 text-white hover:bg-primary-400' />
+              </div>
+              <div className="">
+                <RotatingIntoView from='right' duration={0.6} rotations={polygonRotation}>
+                  <Image src={Polygon} alt="Polygon" />
+                </RotatingIntoView>
+              </div>
             </div>
           </AnimateIntoView>
         </div>
         <div className='flex-1'>
           <User />
         </div>
-      </div>
-    </div>
+      </div >
+    </div >
   )
 }
 

@@ -55,7 +55,7 @@ const Service = ({ service }: ServiceProps) => {
 
 const Services = () => {
   return (
-    <div className='custom-wrapper mt-[10rem]'>
+    <div className='custom-wrapper'>
       <div className='flex lg:flex-row flex-col items-center justify-between gap-10'>
         <div className='basis-1/2 text-center lg:text-left'>
           <Title text="Professional Services Offered" size='small' className='lg:w-[70%] w-full' as="h2" />
