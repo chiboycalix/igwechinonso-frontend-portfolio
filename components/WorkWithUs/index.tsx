@@ -14,7 +14,7 @@ const WorkWithUs = () => {
         />
       </div>
       <div className='mx-auto md:max-w-[15%] w-[50%] mt-[2rem]'>
-        <Button caption="Let's talk" className="font-bold rounded text-sm" variant='bg-primary-100 hover:bg-primary-200 text-primary-500'/>
+        <Button caption="Let's talk" className="font-bold rounded text-sm text-white" variant='bg-primary-500 hover:bg-primary-400' />
       </div>
     </div>
   )

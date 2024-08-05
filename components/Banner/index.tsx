@@ -7,6 +7,8 @@ import AnimateIntoView from '@/components/AnimateIntoView';
 import RotatingIntoView from '../RotateIntoView';
 import Image from 'next/image';
 import { Polygon } from '@/constants';
+import { cn } from "@/lib/utils";
+import DotPattern from "@/components/DotPattern";
 
 
 const bannerCardData = [
@@ -65,6 +67,7 @@ const Banner = () => {
   return (
     <div className='custom-wrapper mt-[10rem]'>
       <div className='flex items-start justify-between flex-col lg:flex-row'>
+
         <div className='basis-1/2 text-center lg:text-left'>
           <AnimateIntoView from='left' duration={0.9}>
             <Title
@@ -83,7 +86,7 @@ const Banner = () => {
             </AnimateIntoView>
             <div className='flex items-start sm:flex-row flex-col justify-between mt-[3rem]'>
               <div className='md:w-[20%] sm:w-[30%] w-full'>
-                <Button caption="Let's talk" className='bg-primary-500 text-white hover:bg-primary-400' />
+                <Button caption="Let's talk" className='bg-primary-500 text-white hover:bg-primary-400 text-sm font-black' />
               </div>
               <div className="">
                 <RotatingIntoView from='right' duration={0.6} rotations={polygonRotation}>
@@ -94,6 +97,11 @@ const Banner = () => {
           </AnimateIntoView>
         </div>
         <div className='flex-1'>
+          <DotPattern
+            className={cn(
+              "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]",
+            )}
+          />
           <User />
         </div>
       </div >

@@ -12,48 +12,48 @@ export const projects = [
     name: "Plumbit",
     src: Plumbit,
     isDesktop: false,
-    description:"A Platform that Simplifies workflow and amplify Success",
-    href:"https://plumbit.vercel.app"
+    description: "A Platform that Simplifies workflow and amplify Success",
+    href: "https://plumbit.vercel.app"
   },
   {
     id: 2,
     name: "Approvam",
     src: Approvam,
     isDesktop: true,
-    description:"A Platform that Simplifies workflow and amplify Success",
-    href:"https://www.approvam.com/"
+    description: "A Platform that Simplifies workflow and amplify Success",
+    href: "https://www.approvam.com/"
   },
   {
     id: 3,
     name: "SkillTease",
     src: SkillTease,
     isDesktop: true,
-    description:"A Platform that Simplifies workflow and amplify Success",
-    href:"https://script-tease.vercel.app/"
+    description: "A Platform that Simplifies workflow and amplify Success",
+    href: "https://script-tease.vercel.app/"
   },
   {
     id: 4,
     name: "Plumbit",
     src: Plumbit,
     isDesktop: true,
-    description:"A Platform that Simplifies workflow and amplify Success",
-    href:"https://plumbit.vercel.app"
+    description: "A Platform that Simplifies workflow and amplify Success",
+    href: "https://plumbit.vercel.app"
   },
   {
     id: 5,
     name: "Approvam",
     src: Approvam,
     isDesktop: true,
-    description:"A Platform that Simplifies workflow and amplify Success",
-     href:"https://www.approvam.com/"
+    description: "A Platform that Simplifies workflow and amplify Success",
+    href: "https://www.approvam.com/"
   },
   {
     id: 6,
     name: "SkillTease",
     src: SkillTease,
     isDesktop: true,
-    description:"A Platform that Simplifies workflow and amplify Success",
-    href:"https://script-tease.vercel.app/"
+    description: "A Platform that Simplifies workflow and amplify Success",
+    href: "https://script-tease.vercel.app/"
   }
 ];
 
@@ -64,12 +64,12 @@ type ProjectProps = {
     src: any;
     isDesktop: boolean;
     description: string;
-    href:string;
+    href: string;
   }
 }
 
 export const Project = ({ project }: ProjectProps) => {
-  const { isDesktop, src, name, description, href } = project
+  const { isDesktop, src, name, description, href } = project;
   return <div className='shadow-lg dark:bg-[#0f151b] bg-white rounded-lg'>
     <Image
       src={src}
@@ -101,12 +101,12 @@ export const Project = ({ project }: ProjectProps) => {
           text={isDesktop ? "Desktop App" : "Mobile App"}
           className=''
         />
-        <Link href={href} target='_blank' className='bg-primary-100 hover:bg-primary-200 px-3 py-[2px]'>
+        <Link href={href} target='_blank' className='bg-primary-500 hover:bg-primary-400 px-3 py-[2px] rounded font-bold'>
           <Paragraph
             as="p"
             size='small'
             text="visit"
-            className='text-primary-500 font-bold dark:text-primary-500'
+            className='text-white'
           />
         </Link>
       </div>
@@ -122,8 +122,8 @@ const Projects = () => {
           return <Project project={project} key={idx} />
         })}
       </div>
-      <div className='mx-auto sm:max-w-[25%] w-full mt-[2rem]'>
-        <Button caption='View more projects' className="font-bold text-sm" variant='bg-primary-100 hover:bg-primary-200 text-primary-500'/>
+      <div className='mx-auto sm:max-w-[15%] w-full mt-[2rem]'>
+        <Button caption='View more projects' className="font-bold text-sm" variant='bg-primary-500 hover:bg-primary-400 text-white' />
       </div>
     </div>
   )

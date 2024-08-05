@@ -1,18 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import './custom.css';
+@import "./custom.css";
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
-@layer base{
+@layer base {
   body {
-      /* @apply dark:bg-[#0F151B] bg-[#f8f9fa] */
-      @apply dark:bg-[#0b0f13] bg-[#f8f9fa];
-      overflow-y: auto;
+    /* @apply dark:bg-[#0F151B] bg-[#f8f9fa] */
+    @apply dark:bg-[#000101] bg-[#f8f9fa];
+    overflow-y: auto;
   }
 }
 .font-inter {

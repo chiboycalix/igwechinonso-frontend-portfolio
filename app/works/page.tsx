@@ -12,7 +12,7 @@ const tabs = [
     title: "Website",
     value: "website",
     content: (
-      <div className="w-full bg-primary-500 p-5 rounded-2xl min-h-screen">
+      <div className="w-full p-5 rounded-2xl min-h-screen bg-white shadow-xl dark:bg-[#19181A]">
         <div className='grid grid-cols-3 gap-10'>
           {desktopApps.map((desktopApp, idx) => {
             return <AnimateIntoView key={idx} from='bottom' duration={0.3}><Project project={desktopApp} /></AnimateIntoView>
@@ -25,7 +25,7 @@ const tabs = [
     title: "Mobile Apps",
     value: "Mobile Apps",
     content: (
-      <div className="w-full bg-primary-500 p-5 rounded-2xl min-h-screen">
+      <div className="w-full p-5 rounded-2xl min-h-screen bg-white shadow-xl dark:bg-[#19181A]">
         <div className='grid grid-cols-3 gap-10'>
           {mobileApps.map((mobileApp, idx) => {
             return <AnimateIntoView key={idx} from='bottom' duration={0.6}><Project project={mobileApp} /></AnimateIntoView>
@@ -39,7 +39,7 @@ const tabs = [
     title: "APIs",
     value: "apis",
     content: (
-      <div className="w-full bg-primary-500 p-5 rounded-2xl min-h-screen">
+      <div className="w-full p-5 rounded-2xl min-h-screen bg-white shadow-xl dark:bg-[#19181A]">
       </div>
     ),
   },
