@@ -33,7 +33,7 @@ const User = () => {
         </RotatingIntoView>
       </div>
       <AnimateIntoView from='bottom' duration={0.6}>
-        <div className='w-[400px] h-[400px] rounded-full bg-hue-700 absolute top-[200px] left-[100px] overflow-bottom-hidden'>
+        <div className='w-[400px] h-[400px] rounded-full bg-primary-700 absolute top-[200px] left-[100px] overflow-bottom-hidden'>
           <Image src={Layer} alt="layer" className='absolute -top-[185px] h-[585px] rounded-b-full' />
         </div>
       </AnimateIntoView>

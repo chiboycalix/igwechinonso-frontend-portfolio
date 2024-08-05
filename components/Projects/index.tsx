@@ -6,8 +6,8 @@ import { Plumbit, Approvam, SkillTribe, LinkLight, LinkDark, GithubDark, GithubL
 import Paragraph from '../Paragraph';
 import Link from 'next/link';
 import Button from '@/components/Button';
-import { useTheme } from '@material-tailwind/react';
-
+import { useTheme } from 'next-themes';
+import AnimateIntoView from "@/components/AnimateIntoView"
 export const projects = [
   {
     id: 1,
@@ -130,7 +130,9 @@ const Projects = () => {
       <Title text="My latest work" size='small' className='lg:w-[70%] w-full' as="h2" />
       <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 mt-[1rem]'>
         {projects.map((project, idx) => {
-          return <Project project={project} key={idx} />
+          return <AnimateIntoView key={idx} from='bottom' duration={1}>
+            <Project project={project} />
+          </AnimateIntoView>
         })}
       </div>
       <div className='mx-auto sm:max-w-[15%] w-full mt-[2rem]'>

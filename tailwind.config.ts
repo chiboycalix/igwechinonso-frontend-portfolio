@@ -44,7 +44,7 @@ const config: Config = withMT({
     },
     colors: {
       secondary: "#828282",
-      primary: {
+      hue: {
         50: "#eefbf3",
         100: "#d5f6e0",
         200: "#afebc6",
@@ -57,7 +57,7 @@ const config: Config = withMT({
         900: "#0d472e",
         950: "#06281b",
       },
-      hue: {
+      primary: {
         "50": "#fbf9eb",
         "100": "#f5f0cc",
         "200": "#ece19c",
