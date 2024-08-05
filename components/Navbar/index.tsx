@@ -13,7 +13,7 @@ import { cn } from "@/utils/cn";
 
 export const NavList = ({ isDarkMode, currentPath }: { isDarkMode: boolean; currentPath: string; }) => {
   return (
-    <ul className={cn("my-2 flex gap-2 md:mb-0 md:mt-0 md:flex-row md:items-center md:gap-6 flex-col")}>
+    <ul className={cn("my-2 flex gap-2 md:mb-0 md:mt-0 md:flex-row md:items-center md:gap-6 flex-col bg-white dark:bg-[#0F151B]")}>
       <Typography
         as="li"
         variant="small"
@@ -77,7 +77,7 @@ const NavbarComponent = () => {
           )}
         </IconButton>
       </div>
-      <Collapse open={openNav}>
+      <Collapse open={openNav} className="">
         <NavList isDarkMode={isDarkMode} currentPath={currentPath} />
       </Collapse>
     </Navbar>
