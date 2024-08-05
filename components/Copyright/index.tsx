@@ -8,7 +8,7 @@ const Copyright = () => {
         <Paragraph
           as="p"
           size='small'
-          text="All Right Reserved"
+          text={<span><span className='w-10'>©</span>All Right Reserved</span>}
           className='text-center'
         />
       </div>

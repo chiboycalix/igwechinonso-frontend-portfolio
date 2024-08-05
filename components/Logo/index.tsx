@@ -15,9 +15,8 @@ const LogoComponent = () => {
         variant="h6"
         className="mr-4 cursor-pointer py-1.5"
       >
-        <Image src={Logo} alt="portfolio logo" className="w-[50px] h-[50px]" />
+        <Image src={Logo} alt="portfolio logo" className="w-[30px] h-[30px]" />
       </Typography>
-      <Title as="h2" text="Chinonso" size="medium" className="dark:text-white text-black hidden sm:inline-block" />
     </div>
   )
 }

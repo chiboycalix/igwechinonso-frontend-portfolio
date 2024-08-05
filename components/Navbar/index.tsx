@@ -11,23 +11,9 @@ import Link from "next/link";
 import { cn } from "@/utils/cn";
 
 
-export const NavList = ({ isDarkMode, currentPath, isFooter }: { isDarkMode: boolean; currentPath: string;isFooter?:boolean }) => {
-  const footerStyle = isFooter ? "2xs:flex-row flex-wrap" : "flex-col"
+export const NavList = ({ isDarkMode, currentPath }: { isDarkMode: boolean; currentPath: string; }) => {
   return (
-    <ul className={cn("my-2 flex gap-2 md:mb-0 md:mt-0 md:flex-row md:items-center md:gap-6", footerStyle)}>
-      {
-        links.map((link) => {
-          return <Typography
-            as="li"
-            className={`p-1 font-medium font-inter text-base ${isDarkMode ? "text-white" : "text-black"} ${currentPath === link.path ? 'text-primary-400 font-bold' : ''}`}
-            key={link.id}
-          >
-            <Link href={link.path} className="flex items-center hover:text-primary-500 transition-colors">
-              {link.name}
-            </Link>
-          </Typography>
-        })
-      }
+    <ul className={cn("my-2 flex gap-2 md:mb-0 md:mt-0 md:flex-row md:items-center md:gap-6")}>
       <Typography
         as="li"
         variant="small"
@@ -36,6 +22,20 @@ export const NavList = ({ isDarkMode, currentPath, isFooter }: { isDarkMode: boo
       >
         <ThemeSwitcher />
       </Typography>
+      {
+        links.map((link) => {
+          return <Typography
+            as="li"
+            className={`p-1 font-medium font-sora text-base ${isDarkMode ? "text-white" : "text-black"} ${currentPath === link.path ? 'text-primary-400 font-bold' : ''}`}
+            key={link.id}
+          >
+            <Link href={link.path} className="flex items-center hover:text-primary-500 transition-colors">
+              {link.name}
+            </Link>
+          </Typography>
+        })
+      }
+
     </ul>
   );
 }
@@ -58,7 +58,7 @@ const NavbarComponent = () => {
   }, []);
 
   return (
-    <Navbar className="fixed top-0 left-0 z-[90000] px-[1rem] xl:px-[5rem] py-3 max-w-full rounded-none shadow-sm border-none dark:bg-[#0F151B] bg-white">
+    <Navbar className="fixed top-0 left-0 z-[90000] px-[1rem] xl:px-[5rem] py-4 max-w-full rounded-none shadow-md border-none dark:bg-[#0F151B] bg-white">
       <div className="flex items-center justify-between max-w-[1280px] mx-auto">
         <LogoComponent />
         <div className="hidden md:block">

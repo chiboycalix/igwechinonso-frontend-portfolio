@@ -8,7 +8,7 @@ type ButtonProps = {
 }
 const Button = ({ caption, className, variant }: ButtonProps) => {
   return (
-    <button className={cn("w-full cursor-pointer px-[20px] py-[14px] rounded font-bold", variant, className)}>{caption}</button>
+    <button className={cn("w-full cursor-pointer px-[20px] py-[14px] rounded font-bold font-sora", variant, className)}>{caption}</button>
   )
 }
 

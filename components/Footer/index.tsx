@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useTheme } from 'next-themes';
 import Paragraph from '../Paragraph';
 import Image from 'next/image';
-import { Github, Linkedin, Twitter } from '@/constants';
+import { Github, LinkedinLight, LinkedinDark, Twitter, XDark, XLight, GithubDark, GithubLight, CopyrightDark, CopyrightLight } from '@/constants';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -17,26 +17,24 @@ const Footer = () => {
   return (
     <footer className='xl:px-[5rem] px-[1rem] py-3 max-w-full dark:bg-[#0F151B] bg-white'>
       <div className='max-w-[1280px] mx-auto'>
-        <div className='w-full flex flex-col md:flex-row items-center justify-between'>
-          <LogoComponent />
-          <NavList isDarkMode={isDarkMode} currentPath={currentPath} isFooter/>
-        </div>
         <div className='flex items-center justify-between md:flex-row flex-col'>
-          <Paragraph
-            as="p"
-            size='medium'
-            text="Crafting seamless digital journeys with top-notch frontend expertise."
-            className='my-3 text-center md:text-left'
-          />
+          <div className='flex items-center justify-center'>
+            <Image src={isDarkMode ? CopyrightDark : CopyrightLight} alt="Github" className='w-6' />
+            <Paragraph
+              as="p"
+              size='small'
+              text="2024 IGWE ABRAHAM CHINONSO"
+              className='my-3 text-center md:text-left font-normal'
+            /></div>
           <div className='flex items-center justify-between gap-5'>
             <Link href="#">
-              <Image src={Linkedin} alt="Linkedin" className='w-5'/>
+              <Image src={isDarkMode ? GithubDark : GithubLight} alt="Github" className='w-6' />
             </Link>
             <Link href="#">
-              <Image src={Twitter} alt="Twitter" className='w-5'/>
+              <Image src={isDarkMode ? LinkedinDark : LinkedinLight} alt="Linkedin" className='w-6' />
             </Link>
             <Link href="#">
-              <Image src={Github} alt="Github" className='w-5'/>
+              <Image src={isDarkMode ? XDark : XLight} alt="Twitter" className='w-6' />
             </Link>
           </div>
         </div>

@@ -24,7 +24,7 @@ const Title = ({ text, size, as, className }: TitleProps) => {
                                        xl:text-xl xl:leading-xl
                                        text-lg leading-lg`;
   return (
-    <Typography as={as} className={cn(`font-black font-inter`, large, medium, small, className)}>
+    <Typography as={as} className={cn(`font-black font-sora`, large, medium, small, className)}>
       {text}
     </Typography>
   )

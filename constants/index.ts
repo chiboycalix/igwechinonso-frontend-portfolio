@@ -32,6 +32,19 @@ import Rectangle from "@/assets/images/Objects/Rectangle.png";
 import Rectangle163 from "@/assets/images/Objects/Rectangle163.png";
 import Ellipsis from "@/assets/images/Objects/Ellipse.png";
 import Subtract from "@/assets/images/Objects/Subtract.png";
+import LinkedinLight from "@/assets/images/socials/Light/Linkedin-light.svg";
+import LinkedinDark from "@/assets/images/socials/Dark/Linkedin-dark.svg";
+import GithubLight from "@/assets/images/socials/Light/Github-light.svg";
+import GithubDark from "@/assets/images/socials/Dark/Github-dark.svg";
+import XLight from "@/assets/images/socials/Light/X-light.svg";
+import XDark from "@/assets/images/socials/Dark/X-dark.svg";
+import CopyrightLight from "@/assets/images/copyright/light.svg";
+import CopyrightDark from "@/assets/images/copyright/dark.svg";
+import NextJsLight from "@/assets/images/tools/NextJs-Light.svg";
+import NextJsDark from "@/assets/images/tools/NextJs-Dark.svg";
+import LinkLight from "@/assets/images/icons/Link-Light.svg";
+import LinkDark from "@/assets/images/icons/Link-Dark.svg";
+import SkillTribe from "@/assets/images/projects/SkillTribe.png";
 
 const links = [
   {
@@ -97,4 +110,17 @@ export {
   Rectangle163,
   Ellipsis,
   Subtract,
+  LinkedinLight,
+  LinkedinDark,
+  GithubDark,
+  GithubLight,
+  XDark,
+  XLight,
+  CopyrightLight,
+  CopyrightDark,
+  NextJsLight,
+  NextJsDark,
+  LinkLight,
+  LinkDark,
+  SkillTribe,
 };
