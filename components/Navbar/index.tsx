@@ -13,7 +13,7 @@ import { cn } from "@/utils/cn";
 
 export const NavList = ({ isDarkMode, currentPath }: { isDarkMode: boolean; currentPath: string; }) => {
   return (
-    <ul className={cn("my-2 flex gap-2 md:mb-0 md:mt-0 md:flex-row md:items-center md:gap-6")}>
+    <ul className={cn("my-2 flex gap-2 md:mb-0 md:mt-0 md:flex-row md:items-center md:gap-6 flex-col")}>
       <Typography
         as="li"
         variant="small"

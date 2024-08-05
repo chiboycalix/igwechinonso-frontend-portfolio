@@ -4,7 +4,6 @@ import { Providers } from '@/app/providers';
 import NavbarComponent from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
-import Copyright from "@/components/Copyright";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const sora = Sora({ subsets: ["latin"], variable: "--font-sora" });
@@ -23,10 +22,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${lexend.variable} ${sora.variable}`}>
         <Providers>
-          <NavbarComponent />
-          <div className="min-h-screen">{children}</div>
-          <Footer />
-          {/* <Copyright /> */}
+          <div className="flex flex-col min-h-screen">
+            <NavbarComponent />
+            <div className="flex-grow">{children}</div>
+            <Footer />
+          </div>
         </Providers>
       </body>
     </html>

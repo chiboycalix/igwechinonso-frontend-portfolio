@@ -1,16 +1,12 @@
 "use client"
 import React from 'react'
-import LogoComponent from "@/components/Logo";
-import { NavList } from '../Navbar';
-import { usePathname } from "next/navigation";
 import { useTheme } from 'next-themes';
 import Paragraph from '../Paragraph';
 import Image from 'next/image';
-import { Github, LinkedinLight, LinkedinDark, Twitter, XDark, XLight, GithubDark, GithubLight, CopyrightDark, CopyrightLight } from '@/constants';
+import { LinkedinLight, LinkedinDark, XDark, XLight, GithubDark, GithubLight, CopyrightDark, CopyrightLight } from '@/constants';
 import Link from 'next/link';
 
 const Footer = () => {
-  const currentPath = usePathname();
   const { resolvedTheme } = useTheme()
   const isDarkMode = resolvedTheme === "dark";
 

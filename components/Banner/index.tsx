@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Title from '@/components/Title';
 import Paragraph from '@/components/Paragraph';
@@ -6,9 +7,10 @@ import User from '@/components/User';
 import AnimateIntoView from '@/components/AnimateIntoView';
 import RotatingIntoView from '../RotateIntoView';
 import Image from 'next/image';
-import { Polygon } from '@/constants';
+import { Polygon, SCREEN_SIZES } from '@/constants';
 import { cn } from "@/lib/utils";
 import DotPattern from "@/components/DotPattern";
+import useWindowSize from '@/hooks/useWindowSize';
 
 
 const bannerCardData = [
@@ -64,9 +66,10 @@ const polygonRotation = {
 
 
 const Banner = () => {
+  const { width } = useWindowSize()
   return (
     <div className='custom-wrapper mt-[10rem]'>
-      <div className='flex items-start justify-between flex-col lg:flex-row'>
+      <div className='flex lg:items-start items-center justify-between flex-col lg:flex-row'>
 
         <div className='basis-1/2 text-center lg:text-left'>
           <AnimateIntoView from='left' duration={0.9}>
@@ -88,7 +91,7 @@ const Banner = () => {
               <div className='md:w-[20%] sm:w-[30%] w-full'>
                 <Button caption="Let's talk" className='bg-primary-500 text-white hover:bg-primary-400 text-sm font-black' />
               </div>
-              <div className="">
+              <div className="hidden lg:inline-block">
                 <RotatingIntoView from='right' duration={0.6} rotations={polygonRotation}>
                   <Image src={Polygon} alt="Polygon" />
                 </RotatingIntoView>
@@ -102,7 +105,7 @@ const Banner = () => {
               "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]",
             )}
           />
-          <User />
+          {width >= SCREEN_SIZES.IPAD_PRO ? <User /> : null}
         </div>
       </div >
     </div >

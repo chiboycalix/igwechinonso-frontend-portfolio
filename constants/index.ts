@@ -74,7 +74,12 @@ const links = [
   },
 ];
 
+const SCREEN_SIZES = {
+  IPAD_PRO: 1024,
+};
+
 export {
+  SCREEN_SIZES,
   links,
   Webpack,
   Github,

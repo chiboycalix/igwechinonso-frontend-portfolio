@@ -2,7 +2,7 @@
 import React from 'react';
 import Title from '@/components/Title';
 import Image from 'next/image';
-import { Plumbit, MobileIcon, DesktopIcon, Approvam, SkillTribe, LinkLight, LinkDark, GithubDark, GithubLight } from '@/constants';
+import { Plumbit, Approvam, SkillTribe, LinkLight, LinkDark, GithubDark, GithubLight } from '@/constants';
 import Paragraph from '../Paragraph';
 import Link from 'next/link';
 import Button from '@/components/Button';
