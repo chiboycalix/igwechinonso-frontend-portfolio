@@ -45,6 +45,7 @@ import NextJsDark from "@/assets/images/tools/NextJs-Dark.svg";
 import LinkLight from "@/assets/images/icons/Link-Light.svg";
 import LinkDark from "@/assets/images/icons/Link-Dark.svg";
 import SkillTribe from "@/assets/images/projects/SkillTribe.png";
+import SoftwareEngineer from "@/assets/SoftwareEngineer.svg";
 
 const links = [
   {
@@ -128,4 +129,5 @@ export {
   LinkLight,
   LinkDark,
   SkillTribe,
+  SoftwareEngineer,
 };

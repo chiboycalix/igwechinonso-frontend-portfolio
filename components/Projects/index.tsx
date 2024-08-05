@@ -138,7 +138,7 @@ const Projects = () => {
         })}
       </div>
       <div className='mx-auto sm:max-w-[15%] w-full mt-[2rem]'>
-        <Button caption='View more projects' className="font-bold text-sm" variant='bg-primary-500 hover:bg-primary-400 text-white' />
+        <Button caption='All projects' className="font-bold text-sm" variant='bg-primary-500 hover:bg-primary-400 text-white' />
       </div>
     </div>
   )

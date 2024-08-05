@@ -7,10 +7,7 @@ import User from '@/components/User';
 import AnimateIntoView from '@/components/AnimateIntoView';
 import RotatingIntoView from '../RotateIntoView';
 import Image from 'next/image';
-import { Polygon, SCREEN_SIZES } from '@/constants';
-import { cn } from "@/lib/utils";
-import DotPattern from "@/components/DotPattern";
-import useWindowSize from '@/hooks/useWindowSize';
+import { Polygon } from '@/constants';
 
 
 const bannerCardData = [
@@ -66,12 +63,10 @@ const polygonRotation = {
 
 
 const Banner = () => {
-  const { width } = useWindowSize()
   return (
     <div className='custom-wrapper mt-[10rem]'>
-      <div className='flex lg:items-start items-center justify-between flex-col lg:flex-row'>
-
-        <div className='basis-1/2 text-center lg:text-left'>
+      <div className='flex lg:items-start items-center justify-between flex-col lg:flex-row gap-4'>
+        <div className='basis-[50%] text-center lg:text-left'>
           <AnimateIntoView from='left' duration={0.9}>
             <Title
               text="Skilled in Frontend Development, Enthusiastic About Building Seamless Digital Experiences."
@@ -99,13 +94,8 @@ const Banner = () => {
             </div>
           </AnimateIntoView>
         </div>
-        <div className='flex-1'>
-          <DotPattern
-            className={cn(
-              "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]",
-            )}
-          />
-          {width >= SCREEN_SIZES.IPAD_PRO ? <User /> : null}
+        <div className='flex-1 sm:-mt-[10rem] -mt-[3rem]'>
+          <User />
         </div>
       </div >
     </div >
