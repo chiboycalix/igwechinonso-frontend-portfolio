@@ -82,7 +82,7 @@ export const Project = ({ project }: ProjectProps) => {
   const isDarkMode = resolvedTheme === "dark";
 
   const { src, name, description, href, githubRepo } = project;
-  return <div className='shadow-lg dark:bg-[#0f151b] bg-white rounded-lg border'>
+  return <div className='shadow-lg dark:bg-[#0f151b] bg-white rounded-lg dark:border-gray-900 border'>
     <Image
       src={src}
       alt={name}

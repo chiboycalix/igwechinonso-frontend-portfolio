@@ -1,128 +1,45 @@
-"use client";
+import React from 'react';
 
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { cn } from "@/utils/cn";
-import Paragraph from "../Paragraph";
+interface TabProps {
+  tabs: { id: string; label: string }[];
+  activeTab: string;
+  onTabClick: (tab: string) => void;
+}
 
-type Tab = {
-  title: string;
-  value: string;
-  content?: string | React.ReactNode | any;
-};
-
-const Tabs = ({
-  tabs: propTabs,
-  containerClassName,
-  activeTabClassName,
-  tabClassName,
-  contentClassName,
-}: {
-  tabs: Tab[];
-  containerClassName?: string;
-  activeTabClassName?: string;
-  tabClassName?: string;
-  contentClassName?: string;
-}) => {
-  const [active, setActive] = useState<Tab>(propTabs[0]);
-  const [tabs, setTabs] = useState<Tab[]>(propTabs);
-
-  const moveSelectedTabToTop = (idx: number) => {
-    const newTabs = [...propTabs];
-    const selectedTab = newTabs.splice(idx, 1);
-    newTabs.unshift(selectedTab[0]);
-    setTabs(newTabs);
-    setActive(newTabs[0]);
-  };
-
-  const [hovering, setHovering] = useState(false);
-
+export const Tabs: React.FC<TabProps> = ({ tabs, activeTab, onTabClick }) => {
   return (
-    <>
-      <div
-        className={cn(
-          "flex flex-row items-center justify-start [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
-          containerClassName
-        )}
-      >
-        {propTabs.map((tab, idx) => (
-          <button
-            key={tab.title}
-            onClick={() => {
-              moveSelectedTabToTop(idx);
-            }}
-            onMouseEnter={() => setHovering(true)}
-            onMouseLeave={() => setHovering(false)}
-            className={cn("relative px-4 py-2 rounded-full", tabClassName)}
-            style={{
-              transformStyle: "preserve-3d",
-            }}
-          >
-            {active.value === tab.value && (
-              <motion.div
-                layoutId="clickedbutton"
-                transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
-                className={cn(
-                  "absolute inset-0 bg-primary-100 dark:bg-[#19181A] rounded-full ",
-                  activeTabClassName
-                )}
-              />
-            )}
-            <Paragraph
-              as="p"
-              size='medium'
-              text={tab.title}
-              className='text-black relative block'
-            />
-
-          </button>
-        ))}
-      </div>
-      <FadeInDiv
-        tabs={tabs}
-        active={active}
-        key={active.value}
-        hovering={hovering}
-        className={cn("mt-[3rem]", contentClassName)}
-      />
-    </>
-  );
-};
-
-export const FadeInDiv = ({
-  className,
-  tabs,
-  hovering,
-}: {
-  className?: string;
-  key?: string;
-  tabs: Tab[];
-  active: Tab;
-  hovering?: boolean;
-}) => {
-  const isActive = (tab: Tab) => {
-    return tab.value === tabs[0].value;
-  };
-  return (
-    <div className="relative w-full h-[800px] mb-[115rem] xs:mb-[37rem] sm:mb-[36rem] md:mb-[35rem] lg:mb-[8rem] xl:mb-[15rem]">
-      {tabs.map((tab, idx) => (
-        <motion.div
-          key={tab.value}
-          layoutId={tab.value}
-          style={{
-            scale: 1 - idx * 0.1,
-            top: hovering ? idx * -50 : 0,
-            zIndex: -idx,
-            opacity: idx < 3 ? 1 - idx * 0.1 : 0,
-          }}
-          animate={{
-            y: isActive(tab) ? [0, 40, 0] : 0,
-          }}
-          className={cn("w-full h-full absolute top-0 left-0", className)}
+    <div className="mb-4">
+      <div className="sm:hidden">
+        <select
+          className="block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm"
+          value={activeTab}
+          onChange={(e) => onTabClick(e.target.value)}
         >
-          {tab.content}
-        </motion.div>
-      ))}
+          {tabs.map((tab) => (
+            <option key={tab.id} value={tab.id}>
+              {tab.label}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div className="hidden sm:block">
+        <div className="dark:border-b dark:border-gray-900 border-b">
+          <nav className="-mb-px flex space-x-8" aria-label="Tabs">
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => onTabClick(tab.id)}
+                className={`${activeTab === tab.id
+                  ? 'border-primary-500 text-primary-600'
+                  : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                  } whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium font-sora`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </nav>
+        </div>
+      </div>
     </div>
   );
 };
