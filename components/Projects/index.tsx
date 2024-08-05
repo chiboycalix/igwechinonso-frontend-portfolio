@@ -8,6 +8,8 @@ import Link from 'next/link';
 import Button from '@/components/Button';
 import { useTheme } from 'next-themes';
 import AnimateIntoView from "@/components/AnimateIntoView"
+import ImageHover from '@/components/ImageHover'
+
 export const projects = [
   {
     id: 1,
@@ -83,11 +85,11 @@ export const Project = ({ project }: ProjectProps) => {
 
   const { src, name, description, href, githubRepo } = project;
   return <div className='shadow-lg dark:bg-[#0f151b] bg-white rounded-lg dark:border-gray-900 border'>
-    <Image
+    <ImageHover
       src={src}
-      alt={name}
       className='rounded-t-lg'
     />
+
     <div className='p-4 border-t border-gray-300'>
       <Paragraph
         as="p"

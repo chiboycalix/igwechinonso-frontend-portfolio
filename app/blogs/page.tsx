@@ -54,8 +54,7 @@ const blogs = [
 ];
 const Blog = ({ blog }: BlogProps) => {
   return <AnimateIntoView from='bottom' duration={0.6}>
-    <ImageHover src={blog.src} />
-
+    <ImageHover src={blog.src} rounded="rounded-2xl" />
     <Paragraph
       as="p"
       size='large'

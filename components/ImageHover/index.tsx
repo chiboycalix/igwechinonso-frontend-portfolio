@@ -4,13 +4,15 @@ import React from 'react'
 
 type ImageHoverProps = {
   src: any;
+  className?: any;
+  rounded?: any;
 }
 
-const ImageHover = ({ src }: ImageHoverProps) => {
+const ImageHover = ({ src, rounded, className }: ImageHoverProps) => {
   return (
     <div className={cn("mx-auto cursor-pointer")}>
-      <div className="relative overflow-hidden rounded-2xl">
-        <Image src={src} alt="blog image" className='rounded-2xl transform transition duration-500 hover:scale-110 w-full' />
+      <div className={cn("relative overflow-hidden", rounded)}>
+        <Image src={src} alt={src} className={cn('transform transition duration-500 hover:scale-110 w-full', className, rounded)} />
       </div>
     </div>
   )
