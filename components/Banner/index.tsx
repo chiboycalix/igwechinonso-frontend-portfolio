@@ -64,7 +64,7 @@ const polygonRotation = {
 
 const Banner = () => {
   return (
-    <div className='custom-wrapper mt-[10rem]'>
+    <div className='custom-wrapper mt-[8rem]'>
       <div className='flex lg:items-start items-center justify-between flex-col lg:flex-row gap-4'>
         <div className='basis-[50%] text-center lg:text-left'>
           <AnimateIntoView from='left' duration={0.9}>
@@ -82,7 +82,7 @@ const Banner = () => {
                 }
               </div>
             </AnimateIntoView>
-            <div className='flex items-start sm:flex-row flex-col justify-between mt-[3rem]'>
+            <div className='flex items-start sm:flex-row flex-col justify-between mt-[2rem]'>
               <div className='md:w-[20%] sm:w-[30%] w-full'>
                 <Button caption="Let's talk" className='bg-primary-500 text-white hover:bg-primary-400 text-sm font-black' />
               </div>

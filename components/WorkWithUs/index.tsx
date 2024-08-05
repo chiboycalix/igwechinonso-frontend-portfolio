@@ -29,10 +29,10 @@ const WorkWithUs: NextPage = () => {
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden p-4">
       <Shape className="absolute top-1/4 left-1/4 w-8 h-8 md:w-12 md:h-12 bg-red-400 rounded-full" />
       <Shape className="absolute top-3/4 left-1/3 w-10 h-10 md:w-16 md:h-16 bg-blue-400 rotate-45" />
-      <Shape className="absolute top-1/2 right-1/4 w-12 h-12 md:w-20 md:h-20 bg-green-400 rounded-lg" />
+      <Shape className="hidden md:block absolute top-1/2 right-1/4 w-12 h-12 md:w-20 md:h-20 bg-green-400 rounded-lg" />
       <Shape className="absolute bottom-1/4 left-1/2 w-8 h-8 md:w-14 md:h-14 bg-brown-400 rounded-full" />
       <Shape className="hidden md:block absolute top-1/3 right-1/3 w-10 h-10 bg-purple-400 rounded-full" />
-      <Shape className="absolute bottom-1/3 left-1/4 w-16 h-16 md:w-24 md:h-24 bg-pink-400 rotate-12" />
+      <Shape className="hidden md:block absolute bottom-1/3 left-1/4 w-16 h-16 md:w-24 md:h-24 bg-pink-400 rotate-12" />
       <Shape className="hidden md:block absolute top-10 right-10 w-16 h-16 bg-indigo-400 rounded-full" />
       <Shape className="absolute bottom-10 left-10 w-12 h-12 md:w-20 md:h-20 bg-teal-400 rotate-45" />
       <Shape className="hidden md:block absolute top-1/2 left-10 w-12 h-12 bg-orange-400 rounded-lg" />
