@@ -64,14 +64,15 @@ const polygonRotation = {
 
 const Banner = () => {
   return (
-    <div className='custom-wrapper mt-[8rem]'>
+    <div className='custom-wrapper sm:mt-[8rem] mt-[4rem]'>
       <div className='flex lg:items-start items-center justify-between flex-col lg:flex-row gap-4'>
-        <div className='basis-[50%] text-center lg:text-left'>
+        <div className='basis-[50%]'>
           <AnimateIntoView from='left' duration={0.9}>
             <Title
               text={<span>Skilled in <span className='text-primary-500'>Frontend Development</span>, Enthusiastic About Building Seamless Digital Experiences.</span>}
               size='large'
               as="h2"
+              className='text-left'
             />
             <AnimateIntoView from='left' duration={0.6}>
               <div className='flex flex-col xs:flex-row items-center justify-between bg-white dark:bg-[#0f151b] p-5 mx-auto lg:mx-0 rounded-md shadow-lg mt-[3rem] w-full'>

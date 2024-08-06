@@ -52,26 +52,31 @@ const links = [
     id: 1,
     name: "Home",
     path: "/",
+    exact: true,
   },
   {
     id: 2,
     name: "Works",
     path: "/works",
+    exact: false,
   },
   {
     id: 3,
     name: "Blog",
     path: "/blogs",
+    exact: false,
   },
   {
     id: 4,
     name: "Service",
     path: "/services",
+    exact: false,
   },
   {
     id: 5,
     name: "Contact",
     path: "/contact",
+    exact: false,
   },
 ];
 

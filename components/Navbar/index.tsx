@@ -10,8 +10,14 @@ import LogoComponent from "@/components/Logo";
 import Link from "next/link";
 import { cn } from "@/utils/cn";
 
+interface NavLinkProps {
+  className?: string;
+  isDarkMode: boolean;
+  currentPath: string;
+}
 
-export const NavList = ({ isDarkMode, currentPath }: { isDarkMode: boolean; currentPath: string; }) => {
+export const NavList = ({ isDarkMode, currentPath }: NavLinkProps) => {
+
   return (
     <ul className={cn("my-2 flex gap-2 md:mb-0 md:mt-0 md:flex-row md:items-center md:gap-6 flex-col bg-white dark:bg-[#0F151B]")}>
       <Typography
@@ -24,9 +30,10 @@ export const NavList = ({ isDarkMode, currentPath }: { isDarkMode: boolean; curr
       </Typography>
       {
         links.map((link) => {
+          const isActive = link.exact ? currentPath === link.path : currentPath.startsWith(link.path);
           return <Typography
             as="li"
-            className={`p-1 font-medium font-sora text-base ${isDarkMode ? "text-white" : "text-black"} ${currentPath === link.path ? 'text-primary-400 font-bold' : ''}`}
+            className={`p-1 font-medium font-sora text-base ${isDarkMode ? "text-white" : "text-black"} ${isActive ? 'text-primary-400 font-bold' : ''}`}
             key={link.id}
           >
             <Link href={link.path} className="flex items-center hover:text-primary-500 transition-colors">
@@ -35,7 +42,6 @@ export const NavList = ({ isDarkMode, currentPath }: { isDarkMode: boolean; curr
           </Typography>
         })
       }
-
     </ul>
   );
 }
