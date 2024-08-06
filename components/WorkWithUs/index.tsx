@@ -26,7 +26,7 @@ const Shape: React.FC<{ className: string }> = ({ className }) => {
 
 const WorkWithUs: NextPage = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden p-4">
+    <div className="custom-wrapper relative min-h-screen flex items-center justify-center overflow-hidden p-4">
       <Shape className="absolute top-1/4 left-1/4 w-8 h-8 md:w-12 md:h-12 bg-red-400 rounded-full" />
       <Shape className="absolute top-3/4 left-1/3 w-10 h-10 md:w-16 md:h-16 bg-blue-400 rotate-45" />
       <Shape className="hidden md:block absolute top-1/2 right-1/4 w-12 h-12 md:w-20 md:h-20 bg-green-400 rounded-lg" />

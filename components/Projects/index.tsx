@@ -19,7 +19,27 @@ export const projects = [
     description: "A Platform that Simplifies workflow and amplify Success",
     href: "https://plumbit.vercel.app",
     githubRepo: "",
-    technologies: []
+    colors: {
+      badgeTextColor: "text-green-500",
+      badgeBgColor: "bg-green-100"
+    },
+    technologies: ["Next.js", "Tailwind CSS", "MongoDB", "TypeScript", "Framer Motion"],
+    concepts: [
+      {
+        id: 1,
+        title: "Problem Found",
+        description: "The problem I find in my life is that I want to read a book and I'm lazy to go buy the book I want, and the book I buy also takes up space in my house and sometimes I only read the book once. . I think this problem is not only me who is facing this problem, but maybe there are many people out there who are experiencing problems like me."
+      },
+      {
+        id: 2,
+        title: "Problem Solving",
+        description: "And a solution is created where we can read many books online without having to buy a book, only need to subscribe to be able to read as many books, and BOBODO provides it all, not only reading books, you can also listen to interesting podcasts when you feel bored reading books."
+      }
+    ],
+    whatImDoing: "My ability to navigate both front-end and back-end landscapes allows me to maintain a unified vision throughout the development process. In BOBODO, this integrated approach ensured that the user interface design harmonized seamlessly with the underlying server logic, resulting in a product that feels cohesive and user-friendly.",
+    visuals: "By wielding front-end technologies like React, I create responsive and dynamic user interfaces that adapt to user interactions. In BOBODO, React components were leveraged to build an interactive dashboard that seamlessly communicated with the server to provide real-time analytics.",
+    database: "Database design and management skills contribute to data integrity, optimized queries, and scalable solutions. In BOBODO, the database was tailored to support the dynamic needs of the application, providing a foundation for seamless scalability.",
+    conclusion: "Collaborating closely with clients becomes more effective as I can comprehend and address concerns across the entire development spectrum. In BOBODO, this collaborative approach resulted in a product that not only met technical requirements but also aligned seamlessly with the client's vision."
   },
   {
     id: 2,
@@ -29,7 +49,11 @@ export const projects = [
     description: "A Platform that Simplifies workflow and amplify Success",
     href: "https://www.approvam.com/",
     githubRepo: "",
-    technologies: []
+    colors: {
+      badgeTextColor: "text-blue-800",
+      badgeBgColor: "bg-blue-100"
+    },
+    technologies: ["Next.js", "Tailwind CSS", "MongoDB", "TypeScript", "Framer Motion"],
   },
   {
     id: 3,
@@ -39,7 +63,11 @@ export const projects = [
     description: "A Platform that Simplifies workflow and amplify Success",
     href: "https://script-tease.vercel.app/",
     githubRepo: "",
-    technologies: []
+    colors: {
+      badgeTextColor: "text-green-500",
+      badgeBgColor: "bg-green-100"
+    },
+    technologies: ["Next.js", "Tailwind CSS", "MongoDB", "TypeScript", "Framer Motion"],
   },
   {
     id: 4,
@@ -49,7 +77,27 @@ export const projects = [
     description: "A Platform that Simplifies workflow and amplify Success",
     href: "https://plumbit.vercel.app",
     githubRepo: "",
-    technologies: []
+    colors: {
+      badgeTextColor: "text-green-500",
+      badgeBgColor: "bg-green-100"
+    },
+    technologies: ["Next.js", "Tailwind CSS", "MongoDB", "TypeScript", "Framer Motion"],
+    concepts: [
+      {
+        id: 1,
+        title: "Problem Found",
+        description: "The problem I find in my life is that I want to read a book and I'm lazy to go buy the book I want, and the book I buy also takes up space in my house and sometimes I only read the book once. . I think this problem is not only me who is facing this problem, but maybe there are many people out there who are experiencing problems like me."
+      },
+      {
+        id: 2,
+        title: "Problem Solving",
+        description: "And a solution is created where we can read many books online without having to buy a book, only need to subscribe to be able to read as many books, and BOBODO provides it all, not only reading books, you can also listen to interesting podcasts when you feel bored reading books."
+      }
+    ],
+    whatImDoing: "My ability to navigate both front-end and back-end landscapes allows me to maintain a unified vision throughout the development process. In BOBODO, this integrated approach ensured that the user interface design harmonized seamlessly with the underlying server logic, resulting in a product that feels cohesive and user-friendly.",
+    visuals: "By wielding front-end technologies like React, I create responsive and dynamic user interfaces that adapt to user interactions. In BOBODO, React components were leveraged to build an interactive dashboard that seamlessly communicated with the server to provide real-time analytics.",
+    database: "Database design and management skills contribute to data integrity, optimized queries, and scalable solutions. In BOBODO, the database was tailored to support the dynamic needs of the application, providing a foundation for seamless scalability.",
+    conclusion: "Collaborating closely with clients becomes more effective as I can comprehend and address concerns across the entire development spectrum. In BOBODO, this collaborative approach resulted in a product that not only met technical requirements but also aligned seamlessly with the client's vision."
   },
   {
     id: 5,
@@ -69,7 +117,11 @@ export const projects = [
     description: "A Platform that Simplifies workflow and amplify Success",
     href: "https://script-tease.vercel.app/",
     githubRepo: "",
-    technologies: []
+    colors: {
+      badgeTextColor: "text-green-500",
+      badgeBgColor: "bg-green-100"
+    },
+    technologies: ["Next.js", "Tailwind CSS", "MongoDB", "TypeScript", "Framer Motion"],
   }
 ];
 
