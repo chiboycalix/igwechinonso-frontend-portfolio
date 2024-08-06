@@ -12,7 +12,7 @@ const ImageHover = ({ src, rounded, className }: ImageHoverProps) => {
   return (
     <div className={cn("mx-auto cursor-pointer")}>
       <div className={cn("relative overflow-hidden", rounded)}>
-        <Image src={src} alt={src} className={cn('transform transition duration-500 hover:scale-110 w-full', className, rounded)} />
+        <Image priority src={src} alt={src} className={cn('transform transition duration-500 hover:scale-110 w-full', className, rounded)} />
       </div>
     </div>
   )

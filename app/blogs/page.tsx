@@ -76,9 +76,9 @@ const Blogs = () => {
 
         <div className='flex-1'>
           <AnimateIntoView from='bottom' duration={0.8}>
-            <div className='w-[70%]'>
+            <div className='w-[80%]'>
               <Title
-                text="Lorem ipsum dolor sit amet, sectetur adipiscing elit"
+                text={<span>Lorem ipsum dolor sit amet, sectetur adipiscing elit</span>}
                 size='large'
                 as="h2"
                 className='hover:text-primary-500 cursor-pointer 2xl:leading-[60px]'

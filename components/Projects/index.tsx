@@ -18,7 +18,8 @@ export const projects = [
     isDesktop: true,
     description: "A Platform that Simplifies workflow and amplify Success",
     href: "https://plumbit.vercel.app",
-    githubRepo: ""
+    githubRepo: "",
+    technologies: []
   },
   {
     id: 2,
@@ -27,7 +28,8 @@ export const projects = [
     isDesktop: true,
     description: "A Platform that Simplifies workflow and amplify Success",
     href: "https://www.approvam.com/",
-    githubRepo: ""
+    githubRepo: "",
+    technologies: []
   },
   {
     id: 3,
@@ -36,7 +38,8 @@ export const projects = [
     isDesktop: true,
     description: "A Platform that Simplifies workflow and amplify Success",
     href: "https://script-tease.vercel.app/",
-    githubRepo: ""
+    githubRepo: "",
+    technologies: []
   },
   {
     id: 4,
@@ -45,7 +48,8 @@ export const projects = [
     isDesktop: true,
     description: "A Platform that Simplifies workflow and amplify Success",
     href: "https://plumbit.vercel.app",
-    githubRepo: ""
+    githubRepo: "",
+    technologies: []
   },
   {
     id: 5,
@@ -54,7 +58,8 @@ export const projects = [
     isDesktop: true,
     description: "A Platform that Simplifies workflow and amplify Success",
     href: "https://www.approvam.com/",
-    githubRepo: ""
+    githubRepo: "",
+    technologies: []
   },
   {
     id: 6,
@@ -63,7 +68,8 @@ export const projects = [
     isDesktop: true,
     description: "A Platform that Simplifies workflow and amplify Success",
     href: "https://script-tease.vercel.app/",
-    githubRepo: ""
+    githubRepo: "",
+    technologies: []
   }
 ];
 
@@ -132,9 +138,11 @@ const Projects = () => {
       <Title text="My latest work" size='small' className='lg:w-[70%] w-full' as="h2" />
       <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 mt-[1rem]'>
         {projects.map((project, idx) => {
-          return <AnimateIntoView key={idx} from='bottom' duration={1}>
-            <Project project={project} />
-          </AnimateIntoView>
+          return <Link href={`/works/${encodeURIComponent(project.name)}`} key={idx}>
+            <AnimateIntoView from='bottom' duration={1}>
+              <Project project={project} />
+            </AnimateIntoView>
+          </Link>
         })}
       </div>
       <div className='mx-auto sm:max-w-[15%] w-full mt-[2rem]'>

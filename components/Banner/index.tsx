@@ -69,7 +69,7 @@ const Banner = () => {
         <div className='basis-[50%] text-center lg:text-left'>
           <AnimateIntoView from='left' duration={0.9}>
             <Title
-              text="Skilled in Frontend Development, Enthusiastic About Building Seamless Digital Experiences."
+              text={<span>Skilled in <span className='text-primary-500'>Frontend Development</span>, Enthusiastic About Building Seamless Digital Experiences.</span>}
               size='large'
               as="h2"
             />

@@ -58,7 +58,7 @@ const Services = () => {
     <div className='custom-wrapper'>
       <div className='flex lg:flex-row flex-col items-center justify-between gap-10'>
         <div className='basis-1/2 text-center lg:text-left'>
-          <Title text="Professional Services Offered" size='small' className='lg:w-[70%] w-full' as="h2" />
+          <Title text={<span>Professional <span className='text-primary-500'>Services</span> Offered</span>} size='small' className='lg:w-[70%] w-full' as="h2" />
         </div>
         <div className='flex-1 text-center lg:text-left'>
           <Paragraph

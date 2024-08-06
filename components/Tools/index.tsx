@@ -95,7 +95,7 @@ const Tools = () => {
   const isDarkMode = resolvedTheme === "dark";
   return (
     <div className='custom-wrapper lg:mt-[7rem] py-[2rem]'>
-      <Title text="The tools I use" as="h2" size='medium' className='text-center lg:text-left' />
+      <Title text={<span>The <span className='text-primary-500'>tools</span> I use</span>} as="h2" size='medium' className='text-center lg:text-left' />
       <div className='grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-10 mt-[1rem]'>
         <ColumnOne isDarkMode={isDarkMode} />
         <ColumnTwo isDarkMode={isDarkMode} />

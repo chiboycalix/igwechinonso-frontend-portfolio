@@ -9,7 +9,7 @@ const WorksCTA = () => {
         <div className='lg:basis-[70%] basis-1 text-center lg:text-left pt-[5rem]'>
           <div className='w-full'>
             <Title
-              text={<span>Work that I <br />have Completed</span>}
+              text={<span><span className='text-primary-500'>Work</span> that I <br />have Completed</span>}
               size='large'
               as="h2"
             />
