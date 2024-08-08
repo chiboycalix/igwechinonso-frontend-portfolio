@@ -12,9 +12,6 @@ import Tailwind from "@/assets/images/tools/Tailwind.png";
 import Vscode from "@/assets/images/tools/vscode.png";
 import Javascript from "@/assets/images/tools/Javascript.png";
 import Framer from "@/assets/images/tools/Framer_White.png";
-import Plumbit from "@/assets/images/projects/Plumbit.png";
-import Approvam from "@/assets/images/projects/Approvam.png";
-import SkillTease from "@/assets/images/projects/SkillTease.png";
 import DesktopIcon from "@/assets/images/projects/DesktopIcon.png";
 import MobileIcon from "@/assets/images/projects/MobileIcon.png";
 import Linkedin from "@/assets/images/socials/Linkedin.png";
@@ -44,7 +41,13 @@ import NextJsLight from "@/assets/images/tools/NextJs-Light.svg";
 import NextJsDark from "@/assets/images/tools/NextJs-Dark.svg";
 import LinkLight from "@/assets/images/icons/Link-Light.svg";
 import LinkDark from "@/assets/images/icons/Link-Dark.svg";
+
 import SkillTribe from "@/assets/images/projects/SkillTribe.png";
+import Plumbit from "@/assets/images/projects/Plumbit.png";
+import Approvam from "@/assets/images/projects/Approvam.png";
+import ApprovamDark from "@/assets/images/projects/ApprovamDark.png";
+import SkillTribeStudentPortal from "@/assets/images/projects/SkillTribeStudentPortal.png";
+import Taskify from "@/assets/images/projects/Taskkify.png";
 import SoftwareEngineer from "@/assets/SoftwareEngineer.svg";
 
 const links = [
@@ -107,7 +110,6 @@ export {
   Linkedin,
   Twitter,
   Approvam,
-  SkillTease,
   BlogOne,
   Second,
   Third,
@@ -133,6 +135,9 @@ export {
   NextJsDark,
   LinkLight,
   LinkDark,
-  SkillTribe,
   SoftwareEngineer,
+  SkillTribe,
+  Taskify,
+  SkillTribeStudentPortal,
+  ApprovamDark,
 };

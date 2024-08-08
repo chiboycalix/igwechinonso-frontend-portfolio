@@ -2,7 +2,7 @@
 import React from 'react';
 import Title from '@/components/Title';
 import Image from 'next/image';
-import { Plumbit, Approvam, SkillTribe, LinkLight, LinkDark, GithubDark, GithubLight } from '@/constants';
+import { Plumbit, Approvam, SkillTribe, ApprovamDark, Taskify, SkillTribeStudentPortal, LinkLight, LinkDark, GithubDark, GithubLight } from '@/constants';
 import Paragraph from '../Paragraph';
 import Link from 'next/link';
 import Button from '@/components/Button';
@@ -15,6 +15,7 @@ export const projects = [
     id: 1,
     name: "Plumbit",
     src: Plumbit,
+    srcDark: Plumbit,
     isDesktop: true,
     description: "A Platform that Simplifies workflow and amplify Success",
     href: "https://plumbit.vercel.app",
@@ -43,25 +44,39 @@ export const projects = [
   },
   {
     id: 2,
-    name: "Approvam",
-    src: Approvam,
+    name: "SkillTribe Student Portal",
+    src: SkillTribeStudentPortal,
+    srcDark: SkillTribeStudentPortal,
     isDesktop: true,
-    description: "A Platform that Simplifies workflow and amplify Success",
-    href: "https://www.approvam.com/",
+    description: "A Platform where students meets potential employers",
+    href: "https://skilltribe-student-portal.vercel.app/",
     githubRepo: "",
     colors: {
       badgeTextColor: "text-blue-800",
       badgeBgColor: "bg-blue-100"
     },
     technologies: ["Next.js", "Tailwind CSS", "MongoDB", "TypeScript", "Framer Motion"],
+    concepts: [
+      {
+        id: 1,
+        title: "Problem Found",
+        description: "The problem I find in my life is that I want to read a book and I'm lazy to go buy the book I want, and the book I buy also takes up space in my house and sometimes I only read the book once. . I think this problem is not only me who is facing this problem, but maybe there are many people out there who are experiencing problems like me."
+      },
+      {
+        id: 2,
+        title: "Problem Solving",
+        description: "And a solution is created where we can read many books online without having to buy a book, only need to subscribe to be able to read as many books, and BOBODO provides it all, not only reading books, you can also listen to interesting podcasts when you feel bored reading books."
+      }
+    ],
   },
   {
     id: 3,
     name: "SkillTribe",
     src: SkillTribe,
+    srcDark: SkillTribe,
     isDesktop: true,
     description: "A Platform that Simplifies workflow and amplify Success",
-    href: "https://script-tease.vercel.app/",
+    href: "https://skill-tribe.vercel.app/",
     githubRepo: "",
     colors: {
       badgeTextColor: "text-green-500",
@@ -71,8 +86,20 @@ export const projects = [
   },
   {
     id: 4,
+    name: "Approvam",
+    src: Approvam,
+    srcDark: ApprovamDark,
+    isDesktop: true,
+    description: "A Platform that Simplifies workflow and amplify Success",
+    href: "https://www.approvam.com/",
+    githubRepo: "",
+    technologies: []
+  },
+  {
+    id: 5,
     name: "Plumbit",
     src: Plumbit,
+    srcDark: Plumbit,
     isDesktop: true,
     description: "A Platform that Simplifies workflow and amplify Success",
     href: "https://plumbit.vercel.app",
@@ -99,23 +126,15 @@ export const projects = [
     database: "Database design and management skills contribute to data integrity, optimized queries, and scalable solutions. In BOBODO, the database was tailored to support the dynamic needs of the application, providing a foundation for seamless scalability.",
     conclusion: "Collaborating closely with clients becomes more effective as I can comprehend and address concerns across the entire development spectrum. In BOBODO, this collaborative approach resulted in a product that not only met technical requirements but also aligned seamlessly with the client's vision."
   },
-  {
-    id: 5,
-    name: "Approvam",
-    src: Approvam,
-    isDesktop: true,
-    description: "A Platform that Simplifies workflow and amplify Success",
-    href: "https://www.approvam.com/",
-    githubRepo: "",
-    technologies: []
-  },
+
   {
     id: 6,
-    name: "SkillTribe",
-    src: SkillTribe,
+    name: "Taskify",
+    src: Taskify,
+    srcDark: Taskify,
     isDesktop: true,
-    description: "A Platform that Simplifies workflow and amplify Success",
-    href: "https://script-tease.vercel.app/",
+    description: "An advanced task management dashboard",
+    href: "https://skill-tribe.vercel.app/",
     githubRepo: "",
     colors: {
       badgeTextColor: "text-green-500",
@@ -134,23 +153,24 @@ type ProjectProps = {
     description: string;
     href: string;
     githubRepo: string;
+    srcDark: any;
   }
 }
 
 export const Project = ({ project }: ProjectProps) => {
-  const { resolvedTheme } = useTheme()
+  const { resolvedTheme, } = useTheme();
   const isDarkMode = resolvedTheme === "dark";
 
-  const { src, name, description, href, githubRepo } = project;
+  const { src, name, srcDark, description, href, githubRepo } = project;
   return <Link href={`/works/${encodeURIComponent(project.name)}`}>
 
     <div className='shadow-lg dark:bg-[#0f151b] bg-white rounded-lg dark:border-gray-900 border'>
       <ImageHover
-        src={src}
+        src={isDarkMode ? srcDark : src}
         className='rounded-t-lg'
       />
 
-      <div className='p-4 border-t border-gray-300'>
+      <div className='p-4 border-t border-gray-300 dark:border-none'>
         <Paragraph
           as="p"
           size='medium'
