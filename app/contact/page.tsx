@@ -92,8 +92,8 @@ const Contact = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <form className="" onSubmit={handleSubmit}>
-            <LabelInputContainer className="mb-4">
-              <Label htmlFor="services">Services</Label>
+            <LabelInputContainer className="mb-8">
+              <Label htmlFor="services">Required Services</Label>
               <RadioGroup
                 options={servicesOptions}
                 name="services"
@@ -102,7 +102,7 @@ const Contact = () => {
               />
             </LabelInputContainer>
 
-            <LabelInputContainer className="mb-4">
+            <LabelInputContainer className="mb-8">
               <Label htmlFor="contractDuration">Contract Duration</Label>
               <RadioGroup
                 options={contractDurationOptions}
@@ -112,28 +112,30 @@ const Contact = () => {
               />
             </LabelInputContainer>
 
-            <LabelInputContainer className="mb-4">
-              <Label htmlFor="clientName">Your Name</Label>
-              <Input
-                id="clientName"
-                placeholder="John Doe"
-                type="text"
-                value={clientName}
-                onChange={(e) => dispatch({ type: 'SET_CLIENT_NAME', payload: e.target.value })}
-              />
-            </LabelInputContainer>
-            <LabelInputContainer className="mb-4">
-              <Label htmlFor="email">Your Email</Label>
-              <Input
-                id="email"
-                placeholder="sample@gmail.com"
-                type="email"
-                value={clientEmail}
-                onChange={(e) => dispatch({ type: 'SET_CLIENT_EMAIL', payload: e.target.value })}
-              />
-            </LabelInputContainer>
-            <LabelInputContainer className="mb-4">
-              <Label htmlFor="clientMessage">Your Message</Label>
+            <div className='flex flex-col md:flex-row items-center gap-4 mb-8'>
+              <LabelInputContainer className="">
+                <Label htmlFor="clientName">Name</Label>
+                <Input
+                  id="clientName"
+                  placeholder="John Doe"
+                  type="text"
+                  value={clientName}
+                  onChange={(e) => dispatch({ type: 'SET_CLIENT_NAME', payload: e.target.value })}
+                />
+              </LabelInputContainer>
+              <LabelInputContainer className="">
+                <Label htmlFor="email">Email</Label>
+                <Input
+                  id="email"
+                  placeholder="sample@gmail.com"
+                  type="email"
+                  value={clientEmail}
+                  onChange={(e) => dispatch({ type: 'SET_CLIENT_EMAIL', payload: e.target.value })}
+                />
+              </LabelInputContainer>
+            </div>
+            <LabelInputContainer className="mb-8">
+              <Label htmlFor="clientMessage">Message</Label>
               <TextArea
                 id="clientMessage"
                 placeholder="Type your message here"
