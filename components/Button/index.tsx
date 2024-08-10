@@ -2,7 +2,7 @@ import { cn } from '@/utils/cn';
 import React from 'react'
 
 type ButtonProps = {
-  caption: string;
+  caption: string | any;
   className?: any;
   variant?: string;
 }
