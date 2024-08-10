@@ -41,7 +41,7 @@ const Shape: React.FC<{ className: string }> = ({ className }) => {
 
 const WorkWithUs: NextPage = () => {
   return (
-    <div className="custom-wrapper relative min-h-screen flex items-center justify-center overflow-hidden p-4 bg-gradient-to-br ">
+    <div className="custom-wrapper relative min-h-[400px] mb-[5rem] flex items-center justify-center overflow-hidden bg-gradient-to-br ">
       <div className="absolute inset-0 overflow-hidden">
         <Shape className="absolute top-1/4 left-1/4 w-8 h-8 md:w-12 md:h-12 bg-red-400 rounded-full blur-sm" />
         <Shape className="absolute top-3/4 left-1/3 w-10 h-10 md:w-16 md:h-16 bg-blue-400 rotate-45 blur-sm" />
