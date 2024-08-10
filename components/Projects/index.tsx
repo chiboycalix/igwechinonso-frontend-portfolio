@@ -167,7 +167,7 @@ export const Project = ({ project }: ProjectProps) => {
     <div className='shadow-lg dark:bg-[#0f151b] bg-white rounded-lg dark:border-gray-900 border'>
       <ImageHover
         src={isDarkMode ? srcDark : src}
-        className='rounded-t-lg'
+        rounded="rounded-t-lg"
       />
 
       <div className='p-4 border-t border-gray-300 dark:border-none'>

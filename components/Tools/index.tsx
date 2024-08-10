@@ -4,18 +4,13 @@ import Title from '@/components/Title'
 import Image from 'next/image';
 import {
   Webpack,
-  Github,
-
   ReactJs,
   Docker,
   TypeScript,
   Mongodb,
-  Golang,
   Vscode,
   Javascript,
-  Framer,
   Tailwind,
-  NextJs,
   NodeJs,
   Redux,
   GithubDark,
@@ -24,6 +19,7 @@ import {
   NextJsLight
 } from '@/constants';
 import { useTheme } from 'next-themes';
+import ImageHover from '@/components/ImageHover';
 
 const ColumnOne = ({ isDarkMode }: { isDarkMode: boolean }) => {
   return <div className='flex flex-col'>

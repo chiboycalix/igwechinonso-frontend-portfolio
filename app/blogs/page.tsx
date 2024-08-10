@@ -66,17 +66,17 @@ const Blog = ({ blog }: BlogProps) => {
 }
 const Blogs = () => {
   return (
-    <div className='custom-wrapper mt-[8rem] py-[2rem]'>
-      <div className='w-full flex items-center justify-between gap-[2rem]'>
-        <div className='basis-[50%]'>
+    <div className='custom-wrapper md:mt-[8rem] mt-[4rem] py-[2rem]'>
+      <div className='w-full flex md:flex-row flex-col md:items-center items-start justify-between gap-[2rem]'>
+        <div className='md:basis-[50%] w-full'>
           <AnimateIntoView from='bottom' duration={0.6}>
-            <ImageHover src={BlogOne} />
+            <ImageHover src={BlogOne} rounded="rounded-2xl" />
           </AnimateIntoView>
         </div>
 
         <div className='flex-1'>
           <AnimateIntoView from='bottom' duration={0.8}>
-            <div className='w-[80%]'>
+            <div className='md:w-[80%] w-full'>
               <Title
                 text={<span>Lorem ipsum dolor sit amet, sectetur adipiscing elit</span>}
                 size='large'
@@ -84,7 +84,7 @@ const Blogs = () => {
                 className='hover:text-primary-500 cursor-pointer 2xl:leading-[60px]'
               />
             </div>
-            <div className='w-[60%] my-[2rem]'>
+            <div className='md:w-[60%] w-full my-[2rem]'>
               <Paragraph
                 as="p"
                 size='small'
@@ -99,7 +99,7 @@ const Blogs = () => {
         </div>
       </div>
 
-      <div className='grid grid-cols-3 gap-x-8 gap-y-16 mt-[5rem]'>
+      <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-8 gap-y-16 mt-[5rem]'>
         {blogs.map((blog) => {
           return <Blog key={blog.id} blog={blog} />
         })}
