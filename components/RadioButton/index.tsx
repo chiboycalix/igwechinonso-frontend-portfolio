@@ -59,7 +59,7 @@ const RadioGroup: React.FC<RadioGroupProps> = ({
           <label
             htmlFor={option.id}
             className={cn(
-              "flex items-center space-x-3 bg-gray-50 rounded-md px-3 py-2 cursor-pointer",
+              "flex items-center space-x-3 bg-gray-50 dark:bg-[#0F151B] rounded-md px-3 py-2 cursor-pointer",
               value === option.value ? "ring-2 ring-primary-500" : ""
             )}
           >
@@ -72,7 +72,7 @@ const RadioGroup: React.FC<RadioGroupProps> = ({
               onChange={() => onChange(option.value)}
               className="form-radio h-5 w-5 text-primary-500 border-gray-300 focus:ring-primary-500 focus:ring-offset-0"
             />
-            <span className="text-md text-black">{option.label}</span>
+            <span className="text-md text-black dark:text-gray-300">{option.label}</span>
           </label>
         </motion.div>
       ))}
