@@ -41,7 +41,7 @@ const Shape: React.FC<{ className: string }> = ({ className }) => {
 
 const WorkWithUs: NextPage = () => {
   return (
-    <div className="custom-wrapper relative min-h-[400px] mb-[5rem] flex items-center justify-center overflow-hidden bg-gradient-to-br ">
+    <div className="custom-wrapper relative min-h-[400px] mb-[5rem] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
         <Shape className="absolute top-1/4 left-1/4 w-8 h-8 md:w-12 md:h-12 bg-red-400 rounded-full blur-sm" />
         <Shape className="absolute top-3/4 left-1/3 w-10 h-10 md:w-16 md:h-16 bg-blue-400 rotate-45 blur-sm" />
@@ -56,7 +56,7 @@ const WorkWithUs: NextPage = () => {
       </div>
 
       <motion.div
-        className="relative z-10 text-center bg-white dark:bg-[#0F151B] p-8 rounded-2xl shadow-2xl backdrop-blur-md bg-opacity-80 dark:bg-opacity-80"
+        className="relative z-10 text-center bg-white dark:bg-[#0F151B] p-8 rounded-2xl shadow-lg backdrop-blur-md"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
