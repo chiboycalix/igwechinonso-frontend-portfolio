@@ -9,6 +9,7 @@ import Button from '@/components/Button';
 import { useTheme } from 'next-themes';
 import AnimateIntoView from "@/components/AnimateIntoView";
 import ImageHover from '@/components/ImageHover';
+import { motion } from 'framer-motion';
 
 export const projects = [
   {
@@ -210,8 +211,27 @@ export const Project = ({ project }: ProjectProps) => {
 const Projects = () => {
   return (
     <div className='custom-wrapper my-[5rem]'>
-      <Title text="My latest work" size='small' className='lg:w-[70%] w-full' as="h2" />
-      <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 mt-[1rem]'>
+      <Title
+        text={
+          <span>
+            My latest <motion.span
+              className="text-primary-500"
+              initial={{ color: '#000' }}
+              animate={{ color: '#c79e2b' }}
+              transition={{ duration: 1, repeat: Infinity, repeatType: 'reverse' }}
+            >
+              Works
+            </motion.span>
+          </span>
+        }
+        as="h2"
+        size='large'
+        className="text-center mb-4"
+      />
+      <Paragraph as="p" size='medium' text="These are my latest projects. Each one of these projects were carefully built to meet stakeholders expectations." className="text-center max-w-2xl mx-auto" />
+
+
+      <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 mt-[3rem]'>
         {projects.map((project, idx) => {
           return <AnimateIntoView from='bottom' duration={1} key={idx}>
             <Project project={project} />

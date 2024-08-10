@@ -19,87 +19,116 @@ import {
   NextJsLight
 } from '@/constants';
 import { useTheme } from 'next-themes';
-import ImageHover from '@/components/ImageHover';
+import { motion } from 'framer-motion';
+import Paragraph from '../Paragraph';
 
-const ColumnOne = ({ isDarkMode }: { isDarkMode: boolean }) => {
-  return <div className='flex flex-col'>
-    <div className='px-4 py-8 flex justify-center items-center dark:bg-[#0F151B] rounded-xl dark:border-none border-2 border-gray-300'>
-      <Image src={ReactJs} alt="ReactJs" className='w-2/3' />
-    </div>
-    <div className='grid grid-cols-2 gap-5 mt-[1rem]'>
-      <div className='dark:bg-[#0F151B] rounded-xl flex justify-center items-center dark:border-none border-2 border-gray-300'>
-        <Image src={Docker} alt="Docker" />
-      </div>
-      <div className='dark:bg-[#0F151B] rounded-xl flex justify-center items-center dark:border-none border-2 border-gray-300'>
-        <Image src={isDarkMode ? GithubDark : GithubLight} alt="Github" className='w-1/2' />
-      </div>
-    </div>
-  </div>
+interface ToolProps {
+  src: string;
+  alt: string;
+  name: string;
 }
 
-const ColumnTwo = ({ isDarkMode }: { isDarkMode: boolean }) => {
-  return <div className='flex flex-col'>
-    <div className='grid grid-cols-2 gap-5 mb-[1rem]'>
-      <div className='dark:bg-[#0F151B] rounded-xl flex justify-center items-center dark:border-none border-2 border-gray-300'>
-        <Image src={TypeScript} alt="TypeScript" className='w-full h-full' />
-      </div>
-      <div className='dark:bg-[#0F151B] rounded-xl flex justify-center items-center dark:border-none border-2 border-gray-300'>
-        <Image src={isDarkMode ? NextJsDark : NextJsLight} alt="NextJs" className='w-1/2' />
-      </div>
-    </div>
-    <div className='px-4 py-8 flex justify-center items-center dark:bg-[#0F151B] rounded-xl dark:border-none border-2 border-gray-300'>
-      <Image src={Webpack} alt="Webpack" className='w-2/3' />
-    </div>
-  </div>
-}
+const Tool: React.FC<ToolProps> = ({ src, alt, name }) => (
+  <motion.div
+    className="flex flex-col items-center p-4 bg-white dark:bg-[#0F151B] rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+    whileHover={{ y: -5 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    <motion.div
+      className="w-16 h-16 mb-4 relative"
+      whileHover={{ rotate: 360 }}
+      transition={{ duration: 1, type: "spring" }}
+    >
+      <Image src={src} alt={alt} layout="fill" className="object-contain" />
+    </motion.div>
+    <p className="text-center font-medium text-gray-700 dark:text-gray-300">{name}</p>
+  </motion.div>
+);
 
-const ColumnThree = () => {
-  return <div className='flex flex-col'>
-    <div className='px-4 py-8 flex justify-center items-center dark:bg-[#0F151B] rounded-xl dark:border-none border-2 border-gray-300'>
-      <Image src={Redux} alt="Redux" className='w-2/3' />
-    </div>
-    <div className='grid grid-cols-2 gap-5 mt-[1rem]'>
-      <div className='dark:bg-[#0F151B] rounded-xl flex justify-center items-center dark:border-none border-2 border-gray-300'>
-        <Image src={Javascript} alt="Javascript" className='rounded-xl' />
-      </div>
-      <div className='dark:bg-[#0F151B] rounded-xl flex justify-center items-center dark:border-none border-2 border-gray-300'>
-        <Image src={Vscode} alt="Vscode" className='w-1/2' />
-      </div>
-    </div>
-  </div>
-}
-
-const ColumnFour = () => {
-  return <div className='flex flex-col'>
-    <div className='grid grid-cols-2 gap-5 mb-[1rem]'>
-      <div className='dark:bg-[#0F151B] rounded-xl flex justify-center items-center dark:border-none border-2 border-gray-300'>
-        <Image src={Tailwind} alt="Tailwind" />
-      </div>
-      <div className='dark:bg-[#0F151B] rounded-xl flex justify-center items-center dark:border-none border-2 border-gray-300'>
-        <Image src={Mongodb} alt="Mongodb" className='w-1/2' />
-      </div>
-    </div>
-    <div className='px-4 py-8 flex justify-center items-center dark:bg-[#0F151B] rounded-xl dark:border-none border-2 border-gray-300'>
-      <Image src={NodeJs} alt="NodeJs" className='w-2/3' />
-    </div>
-  </div>
-}
-
-
-const Tools = () => {
+const Tools: React.FC = () => {
   const { resolvedTheme } = useTheme()
   const isDarkMode = resolvedTheme === "dark";
+
+  const tools = [
+    { src: ReactJs, alt: "ReactJs", name: "React" },
+    { src: TypeScript, alt: "TypeScript", name: "TypeScript" },
+    { src: isDarkMode ? NextJsDark : NextJsLight, alt: "NextJs", name: "Next.js" },
+    { src: NodeJs, alt: "NodeJs", name: "Node.js" },
+    { src: Tailwind, alt: "Tailwind", name: "Tailwind CSS" },
+    { src: Redux, alt: "Redux", name: "Redux" },
+    { src: Webpack, alt: "Webpack", name: "Webpack" },
+    { src: Docker, alt: "Docker", name: "Docker" },
+    { src: isDarkMode ? GithubDark : GithubLight, alt: "Github", name: "GitHub" },
+    { src: Javascript, alt: "Javascript", name: "JavaScript" },
+    { src: Vscode, alt: "Vscode", name: "VS Code" },
+    { src: Mongodb, alt: "Mongodb", name: "MongoDB" },
+  ];
+
   return (
-    <div className='custom-wrapper lg:mt-[7rem] py-[2rem]'>
-      <Title text={<span>The <span className='text-primary-500'>tools</span> I use</span>} as="h2" size='medium' className='text-center lg:text-left' />
-      <div className='grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-10 mt-[1rem]'>
-        <ColumnOne isDarkMode={isDarkMode} />
-        <ColumnTwo isDarkMode={isDarkMode} />
-        <ColumnThree />
-        <ColumnFour />
+    <motion.section
+      className="py-2 my-[5rem]"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="custom-wrapper">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="mb-12"
+        >
+          <Title
+            text={
+              <span>
+                My <motion.span
+                  className="text-primary-500"
+                  initial={{ color: '#000' }}
+                  animate={{ color: '#c79e2b' }}
+                  transition={{ duration: 1, repeat: Infinity, repeatType: 'reverse' }}
+                >
+                  Toolkit
+                </motion.span>
+              </span>
+            }
+            as="h2"
+            size='large'
+            className="text-center mb-4"
+          />
+          <Paragraph as="p" size='medium' text="These are the technologies and tools I use to bring ideas to life. Each one plays a crucial role in my development process." className="text-center max-w-2xl mx-auto" />
+
+
+        </motion.div>
+
+        <motion.div
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6"
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.1
+              }
+            }
+          }}
+          initial="hidden"
+          animate="show"
+        >
+          {tools.map((tool, index) => (
+            <motion.div
+              key={tool.name}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                show: { opacity: 1, y: 0 }
+              }}
+            >
+              <Tool {...tool} />
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
-    </div>
+    </motion.section>
   )
 }
 
-export default Tools
+export default Tools;
