@@ -46,7 +46,7 @@ const RadioGroup: React.FC<RadioGroupProps> = ({
             background: useMotionTemplate`
               radial-gradient(
                 ${hoveredId === option.id ? radius + "px" : "0px"} circle at ${mouseX}px ${mouseY}px,
-                var(--primary-900),
+                var(--primary-500),
                 transparent 80%
               )
             `,
@@ -60,7 +60,7 @@ const RadioGroup: React.FC<RadioGroupProps> = ({
             htmlFor={option.id}
             className={cn(
               "flex items-center space-x-3 bg-gray-50 rounded-md px-3 py-2 cursor-pointer",
-              value === option.value ? "ring-2 ring-neutral-400" : ""
+              value === option.value ? "ring-2 ring-primary-500" : ""
             )}
           >
             <input
@@ -70,7 +70,7 @@ const RadioGroup: React.FC<RadioGroupProps> = ({
               value={option.value}
               checked={value === option.value}
               onChange={() => onChange(option.value)}
-              className="form-radio h-5 w-5 text-primary-900 border-gray-300 focus:ring-primary-900 focus:ring-offset-0"
+              className="form-radio h-5 w-5 text-primary-500 border-gray-300 focus:ring-primary-500 focus:ring-offset-0"
             />
             <span className="text-md text-black">{option.label}</span>
           </label>

@@ -32,6 +32,7 @@ const Contact = () => {
     { id: 'frontend', label: 'Frontend', value: 'frontend' },
     { id: 'backend', label: 'Backend', value: 'backend' },
     { id: 'mobile', label: 'Mobile', value: 'mobile' },
+    { id: 'fullstack', label: 'Full Stack', value: 'fullstack' },
   ];
 
   const contractDurationOptions = [
@@ -57,7 +58,7 @@ const Contact = () => {
             className='mt-4'
             as="p"
             size='medium'
-            text="Ready to Bring Your Digital Dreams to Life? Let's Collaborate and Create Seamless, Stunning Experiences That Captivate Users and Drive Results. With Expertise in Frontend Development and a Passion for Innovation, I'm Here to Transform Your Vision into a Digital Masterpiece. Reach Out and Let's Start Building Something Extraordinary Together!" />
+            text="Want to Bring Your Digital Dreams to Life? Let's Collaborate and Create Seamless, Stunning Experiences That Captivate Users and Drive Results. With Expertise in Frontend Development and a Passion for Innovation, I'm Here to Transform Your Vision into a Digital Masterpiece. Reach Out and Let's Start Building Something Extraordinary Together!" />
         </div>
         <div className='flex-1'>
           <form className="" onSubmit={handleSubmit}>
@@ -106,7 +107,7 @@ const Contact = () => {
               <Label htmlFor="clientMessage">Your Message</Label>
               <TextArea
                 id="clientMessage"
-                placeholder="enter message"
+                placeholder="Type your message here"
                 value={clientMessage}
                 onChange={(e) => dispatch({ type: 'SET_CLIENT_MESSAGE', payload: e.target.value })}
               />
