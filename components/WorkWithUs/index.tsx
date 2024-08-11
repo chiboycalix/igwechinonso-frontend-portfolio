@@ -4,6 +4,7 @@ import type { NextPage } from 'next';
 import { motion, useAnimation } from 'framer-motion';
 import Title from '@/components/Title'
 import Paragraph from '../Paragraph';
+import Button from '../Button';
 
 const getRandomDelay = (min: number, max: number) => {
   return Math.random() * (max - min) + min;
@@ -87,13 +88,7 @@ const WorkWithUs: NextPage = () => {
           />
           <Paragraph as="p" size='medium' text="Let's collaborate and bring your ideas to life. Whether it's a website, app, or digital experience, I'm here to help you succeed." className="mb-8 max-w-md" />
         </motion.div>
-        <motion.button
-          className="bg-primary-500 hover:bg-primary-600 text-white font-bold text-sm px-[20px] py-[14px] rounded shadow-lg transition-all duration-300 font-sora"
-          whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(59, 130, 246, 0.5)" }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Let&apos;s Connect
-        </motion.button>
+        <div className='mx-auto sm:max-w-[25%] w-full'><Button caption="Let's Connect" className='' /></div>
       </motion.div>
     </div>
   );

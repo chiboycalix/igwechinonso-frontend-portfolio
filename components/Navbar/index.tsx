@@ -14,9 +14,11 @@ interface NavLinkProps {
   className?: string;
   isDarkMode: boolean;
   currentPath: string;
+  setOpenNav?: any;
+  openNav?: any;
 }
 
-export const NavList = ({ isDarkMode, currentPath }: NavLinkProps) => {
+export const NavList = ({ isDarkMode, currentPath, setOpenNav, openNav }: NavLinkProps) => {
 
   return (
     <ul className={cn("my-2 flex gap-2 md:mb-0 md:mt-0 md:flex-row md:items-center md:gap-6 flex-col bg-white dark:bg-[#0F151B]")}>
@@ -35,6 +37,7 @@ export const NavList = ({ isDarkMode, currentPath }: NavLinkProps) => {
             as="li"
             className={`p-1 font-medium font-sora text-base ${isDarkMode ? "text-white" : "text-black"} ${isActive ? 'text-primary-400 font-bold' : ''}`}
             key={link.id}
+            onClick={() => setOpenNav(!openNav)}
           >
             <Link href={link.path} className="flex items-center hover:text-primary-500 transition-colors">
               {link.name}
@@ -47,8 +50,8 @@ export const NavList = ({ isDarkMode, currentPath }: NavLinkProps) => {
 }
 
 const NavbarComponent = () => {
-  const [openNav, setOpenNav] = React.useState(false);
   const currentPath = usePathname();
+  const [openNav, setOpenNav] = React.useState(false);
   const { resolvedTheme } = useTheme()
   const isDarkMode = resolvedTheme === "dark";
 
@@ -73,7 +76,7 @@ const NavbarComponent = () => {
         <IconButton
           variant="text"
           className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent md:hidden"
-          ripple={false}
+          ripple={true}
           onClick={() => setOpenNav(!openNav)}
         >
           {openNav ? (
@@ -84,7 +87,7 @@ const NavbarComponent = () => {
         </IconButton>
       </div>
       <Collapse open={openNav} className="">
-        <NavList isDarkMode={isDarkMode} currentPath={currentPath} />
+        <NavList isDarkMode={isDarkMode} currentPath={currentPath} openNav={openNav} />
       </Collapse>
     </Navbar>
   );

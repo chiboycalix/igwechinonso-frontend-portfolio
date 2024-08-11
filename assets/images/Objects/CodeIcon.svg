@@ -1,0 +1,46 @@
+<svg width="433" height="385" viewBox="0 0 433 345" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="filter0_d_366_1380" x="0" y="0" width="433" height="345" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dx="-22" dy="18"/>
+      <feGaussianBlur stdDeviation="18.5"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.780392 0 0 0 0 0.619608 0 0 0 0 0.168627 0 0 0 0.31 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_366_1380"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_366_1380" result="shape"/>
+    </filter>
+    <filter id="filter0_d_366_1374" x="0" y="0" width="196" height="196" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="14"/>
+      <feGaussianBlur stdDeviation="12"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.541176 0 0 0 0 0.811765 0 0 0 0 0.964706 0 0 0 0.31 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_366_1374"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_366_1374" result="shape"/>
+    </filter>
+  </defs>
+  
+  <g filter="url(#filter0_d_366_1380)">
+    <rect x="59" y="19" width="359" height="271" rx="29" fill="#c79e2b"/>
+  </g>
+  <path d="M418 78.5H59" stroke="#EEF0F5" stroke-width="13"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M220.849 245.905C218.644 245.209 217.398 242.768 218.068 240.458L245.255 146.723C245.923 144.422 248.24 143.121 250.437 143.815L256.337 145.679C258.541 146.376 259.787 148.817 259.117 151.127L231.93 244.862C231.262 247.163 228.945 248.464 226.749 247.77L220.849 245.905ZM285.213 150.336C286.848 148.654 289.472 148.675 291.083 150.382L330.988 192.656C332.59 194.353 332.594 197.085 330.996 198.787L291.196 241.179C289.589 242.89 286.965 242.918 285.326 241.241L280.934 236.749C279.284 235.061 279.257 232.287 280.874 230.564L313.564 195.746L280.789 161.025C279.167 159.307 279.187 156.533 280.833 154.84L285.213 150.336ZM163.628 195.747L196.403 161.026C198.025 159.308 198.005 156.534 196.359 154.841L191.979 150.337C190.344 148.655 187.72 148.676 186.109 150.382L146.204 192.657C144.602 194.354 144.598 197.086 146.196 198.788L185.996 241.18C187.603 242.891 190.227 242.919 191.866 241.242L196.258 236.75C197.908 235.062 197.935 232.288 196.317 230.565L163.628 195.747Z" fill="#EEF0F5"/>
+  <circle cx="110" cy="46" r="12" fill="#EEF0F5"/>
+  <circle cx="147" cy="46" r="12" fill="#EEF0F5"/>
+  <circle cx="184" cy="46" r="12" fill="#EEF0F5"/>
+  
+  <!-- Animated arrow at the bottom-left corner -->
+  <g filter="url(#filter0_d_366_1374)" transform="translate(-10, 240) scale(0.7)">
+    <path d="M171.218 24.0508C174.624 15.7032 166.297 7.37603 157.949 10.7819L30.3337 62.849C21.435 66.4797 22.063 79.2855 31.2743 82.0279L84.2113 97.7887L99.9721 150.726C102.715 159.937 115.52 160.565 119.151 151.666L171.218 24.0508Z" fill="#8ACFF6">
+      <animateTransform
+        attributeName="transform"
+        type="scale"
+        values="1;1.1;1"
+        dur="2s"
+        repeatCount="indefinite"
+      />
+    </path>
+  </g>
+</svg>

@@ -64,7 +64,7 @@ const polygonRotation = {
 
 const Banner = () => {
   return (
-    <div className='custom-wrapper sm:mt-[8rem] mt-[4rem]'>
+    <div className='custom-wrapper lg:mt-[8rem] mt-[4rem]'>
       <div className='flex lg:items-start items-center justify-between flex-col lg:flex-row gap-4'>
         <div className='basis-[50%]'>
           <AnimateIntoView from='left' duration={0.9}>

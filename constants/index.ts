@@ -50,6 +50,9 @@ import SkillTribeStudentPortal from "@/assets/images/projects/SkillTribeStudentP
 import Taskify from "@/assets/images/projects/Taskkify.png";
 import SoftwareEngineer from "@/assets/SoftwareEngineer.svg";
 
+import CodeIconImage from "@/assets/images/Objects/CodeIcon.svg";
+import ArrowIconImage from "@/assets/images/Objects/arrowIconImage.svg";
+
 const links = [
   {
     id: 1,
@@ -140,4 +143,6 @@ export {
   Taskify,
   SkillTribeStudentPortal,
   ApprovamDark,
+  CodeIconImage,
+  ArrowIconImage,
 };
