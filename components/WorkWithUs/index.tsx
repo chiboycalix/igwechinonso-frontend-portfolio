@@ -88,7 +88,7 @@ const WorkWithUs: NextPage = () => {
           />
           <Paragraph as="p" size='medium' text="Let's collaborate and bring your ideas to life. Whether it's a website, app, or digital experience, I'm here to help you succeed." className="mb-8 max-w-md" />
         </motion.div>
-        <div className='mx-auto sm:max-w-[25%] w-full'><Button caption="Let's Connect" className='' /></div>
+        <div className='mx-auto sm:max-w-[30%] w-full'><Button caption="Let's Connect" className='' /></div>
       </motion.div>
     </div>
   );
