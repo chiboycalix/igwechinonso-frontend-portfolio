@@ -6,7 +6,10 @@ import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
 import WorkWithUs from '@/components/WorkWithUs'
-import ServicesSection from '@/components/ServicesSection'
+import ServicesSection from '@/components/ServicesSection';
+import { Testimonials } from './Testimonial'
+import SectionHeader from '@/components/SectionHeader'
+
 
 const Services = () => {
   return (
@@ -60,35 +63,24 @@ const Services = () => {
           </motion.div>
         </div>
         <div className='mt-[5rem]'>
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <Title
-              text={
-                <span>
-                  Our <motion.span
-                    className="text-primary-500"
-                    initial={{ color: '#000' }}
-                    animate={{ color: '#c79e2b' }}
-                    transition={{ duration: 1, repeat: Infinity, repeatType: 'reverse' }}
-                  >
-                    Services
-                  </motion.span>
-                </span>
-              }
-              as="h2"
-              size='large'
-              className="text-center mb-2"
-            />
-            <Paragraph as="p" size='medium' text="We deliver innovative solutions tailored to your unique needs, combining cutting-edge technology with creative strategies to elevate your business in today's competitive digital landscape." className="text-center max-w-2xl mx-auto" />
+          <SectionHeader
+            titleText={<span>Our
+              <motion.span
+                className="text-primary-500 ml-2"
+                initial={{ color: '#000' }}
+                animate={{ color: '#c79e2b' }}
+                transition={{ duration: 1, repeat: Infinity, repeatType: 'reverse' }}
+              >
+                Services
+              </motion.span>
+            </span>}
+            paragraphText="We deliver innovative solutions tailored to your unique needs, combining cutting-edge technology with creative strategies to elevate your business in today's competitive digital landscape."
+          />
+          <ServicesSection />
+        </div>
 
-          </motion.div>
-
-          <div>
-            <ServicesSection />
-          </div>
+        <div>
+          <Testimonials />
         </div>
       </div>
       <div className='w-full'>

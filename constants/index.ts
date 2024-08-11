@@ -53,6 +53,8 @@ import SoftwareEngineer from "@/assets/SoftwareEngineer.svg";
 import CodeIconImage from "@/assets/images/Objects/CodeIcon.svg";
 import ArrowIconImage from "@/assets/images/Objects/arrowIconImage.svg";
 
+import AppleImage from "@/assets/images/Apple.png";
+
 const links = [
   {
     id: 1,
@@ -145,4 +147,5 @@ export {
   ApprovamDark,
   CodeIconImage,
   ArrowIconImage,
+  AppleImage,
 };
