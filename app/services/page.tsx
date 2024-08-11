@@ -5,6 +5,7 @@ import { ArrowIconImage, CodeIconImage } from '@/constants'
 import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
+import WorkWithUs from '@/components/WorkWithUs'
 
 const Services = () => {
   return (
@@ -55,6 +56,37 @@ const Services = () => {
         >
           <Image src={CodeIconImage} alt='' className='w-full h-auto' />
         </motion.div>
+      </div>
+      <div className='mt-[2rem]'>
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="mb-12"
+        >
+          <Title
+            text={
+              <span>
+                Our <motion.span
+                  className="text-primary-500"
+                  initial={{ color: '#000' }}
+                  animate={{ color: '#c79e2b' }}
+                  transition={{ duration: 1, repeat: Infinity, repeatType: 'reverse' }}
+                >
+                  Services
+                </motion.span>
+              </span>
+            }
+            as="h2"
+            size='large'
+            className="text-center mb-4"
+          />
+          <Paragraph as="p" size='medium' text="We deliver innovative solutions tailored to your unique needs, combining cutting-edge technology with creative strategies to elevate your business in today's competitive digital landscape." className="text-center max-w-2xl mx-auto" />
+
+        </motion.div>
+      </div>
+      <div className='w-full'>
+        <WorkWithUs />
       </div>
     </div>
   )
