@@ -10,7 +10,7 @@ import { TextArea } from '@/components/TextArea';
 import { RadioGroup } from '@/components/RadioButton';
 import Button from '@/components/Button';
 import { motion, AnimatePresence } from 'framer-motion';
-import { sendEmail } from '../api/send-email/route';
+import { sendEmail } from '../actions/sendMail';
 import Modal from '@/components/Modal';
 import Image from 'next/image';
 import { MessageIcon } from '@/constants';
@@ -49,10 +49,10 @@ const Contact = () => {
   ];
 
   const contractDurationOptions = [
-    { id: 'oneMonth', label: '1 Month', value: 'oneMonth' },
-    { id: 'threeMonths', label: '3 Months', value: 'threeMonths' },
-    { id: 'sixMonths', label: '6 Months', value: 'sixMonths' },
-    { id: 'annualy', label: 'Annualy', value: 'annualy' },
+    { id: 'oneMonth', label: '1 Month', value: '1 Month' },
+    { id: 'threeMonths', label: '3 Months', value: '3 Months' },
+    { id: 'sixMonths', label: '6 Months', value: '6 Months' },
+    { id: 'annualy', label: 'Annualy', value: 'Annualy' },
   ]
 
   const { clientEmail, clientName, clientMessage, services, contractDuration, isSubmitting } = state;
@@ -63,7 +63,6 @@ const Contact = () => {
     try {
       dispatch({ type: "SET_IS_SUBMITTING", payload: true })
       const data = await sendEmail({ email: clientEmail, services, message: clientMessage, name: clientName, duration: contractDuration });
-      console.log({ data })
       if (data?.success) {
         setIsModalOpen(true)
       }
@@ -73,7 +72,6 @@ const Contact = () => {
       dispatch({ type: "SET_IS_SUBMITTING", payload: false });
     }
   }
-  console.log({ isSubmitting })
 
   return (
     <motion.div
