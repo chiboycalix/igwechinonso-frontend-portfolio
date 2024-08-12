@@ -21,7 +21,7 @@ interface NavLinkProps {
 export const NavList = ({ isDarkMode, currentPath, setOpenNav, openNav }: NavLinkProps) => {
 
   return (
-    <ul className={cn("my-2 flex gap-2 md:mb-0 md:mt-0 md:flex-row md:items-center md:gap-6 flex-col bg-white dark:bg-[#0F151B]")}>
+    <ul className={cn("my-2 flex gap-2 md:mb-0 md:mt-0 md:flex-row md:items-center md:gap-6 flex-col")}>
       <Typography
         as="li"
         variant="small"

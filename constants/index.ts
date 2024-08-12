@@ -54,7 +54,7 @@ import CodeIconImage from "@/assets/images/Objects/CodeIcon.svg";
 import ArrowIconImage from "@/assets/images/Objects/arrowIconImage.svg";
 
 import AppleImage from "@/assets/images/Apple.png";
-
+import MessageIcon from "@/assets/images/MessageIconpng.png";
 const links = [
   {
     id: 1,
@@ -148,4 +148,5 @@ export {
   CodeIconImage,
   ArrowIconImage,
   AppleImage,
+  MessageIcon,
 };

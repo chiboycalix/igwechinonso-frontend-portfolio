@@ -4,12 +4,16 @@ import { Label } from '@/components/Label';
 import Paragraph from '@/components/Paragraph';
 import Title from '@/components/Title';
 import { cn } from '@/lib/utils';
-import React, { useReducer } from 'react';
+import React, { useReducer, useState } from 'react';
 import { initialContactState, contactReducer } from "@/reducers/contactReducer";
 import { TextArea } from '@/components/TextArea';
 import { RadioGroup } from '@/components/RadioButton';
 import Button from '@/components/Button';
 import { motion, AnimatePresence } from 'framer-motion';
+import { sendEmail } from '../api/send-email/route';
+import Modal from '@/components/Modal';
+import Image from 'next/image';
+import { MessageIcon } from '@/constants';
 
 const LabelInputContainer = ({
   children,
@@ -32,10 +36,10 @@ const LabelInputContainer = ({
 
 const Contact = () => {
   const [state, dispatch] = useReducer(contactReducer, initialContactState);
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission logic here
-  }
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   const servicesOptions = [
     { id: 'frontend', label: 'Frontend', value: 'frontend' },
@@ -52,6 +56,24 @@ const Contact = () => {
   ]
 
   const { clientEmail, clientName, clientMessage, services, contractDuration, isSubmitting } = state;
+
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      dispatch({ type: "SET_IS_SUBMITTING", payload: true })
+      const data = await sendEmail({ email: clientEmail, services, message: clientMessage, name: clientName, duration: contractDuration });
+      console.log({ data })
+      if (data?.success) {
+        setIsModalOpen(true)
+      }
+    } catch (error) {
+      console.log({ error })
+    } finally {
+      dispatch({ type: "SET_IS_SUBMITTING", payload: false });
+    }
+  }
+  console.log({ isSubmitting })
 
   return (
     <motion.div
@@ -168,6 +190,13 @@ const Contact = () => {
           </form>
         </motion.div>
       </div>
+      <Modal isOpen={isModalOpen} onClose={closeModal}>
+        <div className='flex flex-col items-center justify-center'>
+          <Image src={MessageIcon} alt='MessageIcon' className='w-32' />
+          <Title as="h2" text="Request sent" size='medium' />
+          <Paragraph as="p" size='small' className='text-center' text="Thank you for entrusting us. Please wait, we will reply to your request via email" />
+        </div>
+      </Modal>
     </motion.div>
   )
 }
