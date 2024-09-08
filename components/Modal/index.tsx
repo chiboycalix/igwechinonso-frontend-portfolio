@@ -26,7 +26,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
-            className="relative w-auto max-w-md mx-auto my-6 z-50"
+            className="relative w-auto max-w-lg mx-auto my-6 z-50"
           >
             <div className="relative p-12 flex flex-col w-full bg-white dark:bg-[#0F151B] border-0 rounded-lg shadow-lg outline-none focus:outline-none">
               <div className="flex-auto">

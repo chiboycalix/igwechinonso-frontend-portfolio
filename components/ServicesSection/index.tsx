@@ -65,9 +65,6 @@ const ServicesSection = () => {
                 </ul>
                 <Paragraph className="text-gray-600" as="p" text={service.description} size="small" />
               </div>
-              <div className="bg-gray-100 dark:bg-[#0F151B] border-t border-gray-200 dark:border-gray-900 px-6 py-4">
-                <Button className="" caption="Learn more" outline />
-              </div>
             </motion.div>
           ))}
         </div>

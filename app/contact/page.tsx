@@ -62,7 +62,7 @@ const Contact = () => {
     e.preventDefault();
     try {
       dispatch({ type: "SET_IS_SUBMITTING", payload: true })
-      const data = await sendEmail({ email: clientEmail, services, message: clientMessage, name: clientName, duration: contractDuration });
+      const data = await sendEmail({ email: "igwechinonso77@gmail.com", services, message: clientMessage, name: clientName, duration: contractDuration });
       if (data?.success) {
         setIsModalOpen(true)
       }
@@ -143,16 +143,7 @@ const Contact = () => {
                   onChange={(e) => dispatch({ type: 'SET_CLIENT_NAME', payload: e.target.value })}
                 />
               </LabelInputContainer>
-              <LabelInputContainer className="">
-                <Label htmlFor="email">Email</Label>
-                <Input
-                  id="email"
-                  placeholder="sample@gmail.com"
-                  type="email"
-                  value={clientEmail}
-                  onChange={(e) => dispatch({ type: 'SET_CLIENT_EMAIL', payload: e.target.value })}
-                />
-              </LabelInputContainer>
+
             </div>
             <LabelInputContainer className="mb-8">
               <Label htmlFor="clientMessage">Message</Label>
@@ -161,6 +152,7 @@ const Contact = () => {
                 placeholder="Type your message here"
                 value={clientMessage}
                 onChange={(e) => dispatch({ type: 'SET_CLIENT_MESSAGE', payload: e.target.value })}
+                rows={10}
               />
             </LabelInputContainer>
             <AnimatePresence>

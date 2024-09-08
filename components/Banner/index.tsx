@@ -14,12 +14,12 @@ const bannerCardData = [
   {
     id: 1,
     title: "Years of Experience",
-    value: "4+"
+    value: "5+"
   },
   {
     id: 2,
     title: "Completed Projects",
-    value: "10+"
+    value: "6+"
   },
   {
     id: 3,

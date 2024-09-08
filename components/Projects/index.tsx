@@ -10,6 +10,7 @@ import { useTheme } from 'next-themes';
 import AnimateIntoView from "@/components/AnimateIntoView";
 import ImageHover from '@/components/ImageHover';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 export const projects = [
   {
@@ -209,6 +210,7 @@ export const Project = ({ project }: ProjectProps) => {
   </Link>
 }
 const Projects = () => {
+  const router = useRouter()
   return (
     <div className='custom-wrapper my-[5rem]'>
       <Title
@@ -239,7 +241,7 @@ const Projects = () => {
         })}
       </div>
       <div className='mx-auto sm:max-w-[15%] w-full mt-[2rem]'>
-        <Button caption='All projects' className="font-bold text-sm" variant='bg-primary-500 hover:bg-primary-400 text-white' />
+        <Button caption='All projects' className="font-bold text-sm" variant='bg-primary-500 hover:bg-primary-400 text-white' onClick={() => router.push("/works")} />
       </div>
     </div>
   )

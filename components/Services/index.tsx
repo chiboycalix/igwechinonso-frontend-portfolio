@@ -11,21 +11,21 @@ const services = [
     name: "Front-End",
     bgColor: "bg-[#EC7878]",
     description:
-      "Development of the graphical interface of a site, through the use of HTML, CSS, and JavaScript, so that users can view and interact with the website.",
+      "Development of dynamic and responsive web applications using Next.js, React, Tailwind CSS, and TypeScript, creating seamless user interfaces with server-side rendering capabilities, efficient component-based architecture, utility-first styling, and type-safe programming to enhance user interaction and overall performance",
   },
   {
     id: "02",
     name: "Back-End",
     bgColor: "bg-[#7882EC]",
     description:
-      "Development of the infrastructure data that makes your application work. The backend stores and processes application data for the user.",
+      "Development of server-side logic and infrastructure using Node.js, TypeScript, Express, and Go (Golang). This versatile stack enables efficient data processing, robust API creation, and seamless server-client communication, while supporting scalable, high-performance systems that handle complex business logic and ensure data integrity.",
   },
   {
     id: "03",
     name: "Full Stack",
     bgColor: "bg-[#F898EE]",
     description:
-      "Designing and creating applications or sites as a whole. Back end and front end are carried out simultaneously.",
+      "Full-stack development of web applications, combining Next.js, React, and Tailwind CSS for responsive frontends with Node.js, Express, and Go for robust backend systems. Utilizing TypeScript throughout to ensure type safety and enhance development efficiency, creating seamless, high-performance applications from user interface to server infrastructure.",
   },
 ];
 
@@ -49,7 +49,7 @@ const Service = ({ service }: ServiceProps) => {
       </div>
     </div>
     <Paragraph size='large' text={service.name} as="p" className='font-black' />
-    <Paragraph size='medium' as="p" text="Development of the graphical interface of a site, through the use of HTML, CSS, and JavaScript, so that users can view and interact with the website." />
+    <Paragraph size='medium' as="p" text={service.description} />
   </div>
 }
 
@@ -71,7 +71,9 @@ const Services = () => {
       <div className='mt-[4rem]'>
         <div className='grid md:grid-cols-3 grid-cols-1 gap-10'>
           {services.map((service, idx) => {
-            return <AnimateIntoView key={idx} from="bottom" threshold={0.8} duration={idx === 0 ? 0.4 : idx === 1 ? 0.6 : 0.8}><Service service={service} /></AnimateIntoView>
+            return <AnimateIntoView key={idx} from="bottom" threshold={0.8} duration={idx === 0 ? 0.4 : idx === 1 ? 0.6 : 0.8}>
+              <Service service={service} />
+            </AnimateIntoView>
           })}
         </div>
       </div>

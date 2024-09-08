@@ -3,60 +3,51 @@ import React from "react";
 import { Carousel } from "@/components/AppleCarousel";
 import { AppleImage } from "@/constants"
 import { motion } from 'framer-motion'
-import Title from "@/components/Title";
-import Paragraph from "@/components/Paragraph";
+import Sebastiaan from "@/assets/sebastiaan.jpeg"
 import SectionHeader from "@/components/SectionHeader";
 
 const data = [
   {
     category: "Artificial Intelligence",
     title: "You can do more with AI.",
-    src: AppleImage,
-    name: "Jane Doe",
-    profession: "CEO, Tech Innovators",
-    testimonial: "Working with this team has been an absolute game-changer for our business. Their expertise and dedication have significantly improved our digital presence and efficiency."
+    src: Sebastiaan,
+    name: "Sebastiaan Herman",
+    profession: "Founder at Second Company",
+    testimonial: "Over the past year, I've had the distinct pleasure of working alongside Chinonso, a colleague whose contributions have been invaluable. In the realm of software engineering, where meticulous attention to detail and a robust sense of responsibility are paramount, Chinonso stands out as a conscientious developer. This trait, rare and highly prized, manifests in his approach to every project. He consistently demonstrates a deep commitment to quality and efficiency, ensuring that each aspect of his work is executed with precision and care."
   },
   {
-    category: "Productivity",
-    title: "Enhance your productivity.",
-    src: AppleImage,
-    name: "Jane Doe",
-    profession: "CEO, Tech Innovators",
-    testimonial: "Working with this team has been an absolute game-changer for our business. Their expertise and dedication have significantly improved our digital presence and efficiency."
+    category: "Artificial Intelligence",
+    title: "You can do more with AI.",
+    src: Sebastiaan,
+    name: "Sebastiaan Herman",
+    profession: "Founder at Second Company",
+    testimonial: "Over the past year, I've had the distinct pleasure of working alongside Chinonso, a colleague whose contributions have been invaluable. In the realm of software engineering, where meticulous attention to detail and a robust sense of responsibility are paramount, Chinonso stands out as a conscientious developer. This trait, rare and highly prized, manifests in his approach to every project. He consistently demonstrates a deep commitment to quality and efficiency, ensuring that each aspect of his work is executed with precision and care."
   },
   {
-    category: "Product",
-    title: "Launching the new Apple Vision Pro.",
-    src: AppleImage,
-    name: "Jane Doe",
-    profession: "CEO, Tech Innovators",
-    testimonial: "Working with this team has been an absolute game-changer for our business. Their expertise and dedication have significantly improved our digital presence and efficiency."
+    category: "Artificial Intelligence",
+    title: "You can do more with AI.",
+    src: Sebastiaan,
+    name: "Sebastiaan Herman",
+    profession: "Founder at Second Company",
+    testimonial: "Over the past year, I've had the distinct pleasure of working alongside Chinonso, a colleague whose contributions have been invaluable. In the realm of software engineering, where meticulous attention to detail and a robust sense of responsibility are paramount, Chinonso stands out as a conscientious developer. This trait, rare and highly prized, manifests in his approach to every project. He consistently demonstrates a deep commitment to quality and efficiency, ensuring that each aspect of his work is executed with precision and care."
+  },
+  {
+    category: "Artificial Intelligence",
+    title: "You can do more with AI.",
+    src: Sebastiaan,
+    name: "Sebastiaan Herman",
+    profession: "Founder at Second Company",
+    testimonial: "Over the past year, I've had the distinct pleasure of working alongside Chinonso, a colleague whose contributions have been invaluable. In the realm of software engineering, where meticulous attention to detail and a robust sense of responsibility are paramount, Chinonso stands out as a conscientious developer. This trait, rare and highly prized, manifests in his approach to every project. He consistently demonstrates a deep commitment to quality and efficiency, ensuring that each aspect of his work is executed with precision and care."
+  },
+  {
+    category: "Artificial Intelligence",
+    title: "You can do more with AI.",
+    src: Sebastiaan,
+    name: "Sebastiaan Herman",
+    profession: "Founder at Second Company",
+    testimonial: "Over the past year, I've had the distinct pleasure of working alongside Chinonso, a colleague whose contributions have been invaluable. In the realm of software engineering, where meticulous attention to detail and a robust sense of responsibility are paramount, Chinonso stands out as a conscientious developer. This trait, rare and highly prized, manifests in his approach to every project. He consistently demonstrates a deep commitment to quality and efficiency, ensuring that each aspect of his work is executed with precision and care."
   },
 
-  {
-    category: "Product",
-    title: "Maps for your iPhone 15 Pro Max.",
-    src: AppleImage,
-    name: "Jane Doe",
-    profession: "CEO, Tech Innovators",
-    testimonial: "Working with this team has been an absolute game-changer for our business. Their expertise and dedication have significantly improved our digital presence and efficiency."
-  },
-  {
-    category: "iOS",
-    title: "Photography just got better.",
-    src: AppleImage,
-    name: "Jane Doe",
-    profession: "CEO, Tech Innovators",
-    testimonial: "Working with this team has been an absolute game-changer for our business. Their expertise and dedication have significantly improved our digital presence and efficiency."
-  },
-  {
-    category: "Hiring",
-    title: "Hiring for a Staff Software Engineer",
-    src: AppleImage,
-    name: "Jane Doe",
-    profession: "CEO, Tech Innovators",
-    testimonial: "Working with this team has been an absolute game-changer for our business. Their expertise and dedication have significantly improved our digital presence and efficiency."
-  },
 ];
 
 export function Testimonials() {

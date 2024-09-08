@@ -64,7 +64,7 @@ const Services = () => {
         </div>
         <div className='mt-[5rem]'>
           <SectionHeader
-            titleText={<span>Our
+            titleText={<span>My
               <motion.span
                 className="text-primary-500 ml-2"
                 initial={{ color: '#000' }}

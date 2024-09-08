@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c79e2b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <polygon points="100,40 154,70 154,130 100,160 46,130 46,70" fill="url(#grad1)" />
+  
+  <line x1="100" y1="40" x2="100" y2="10" stroke="#94a3b8" stroke-width="3" />
+  <line x1="154" y1="70" x2="190" y2="70" stroke="#94a3b8" stroke-width="3" />
+  <line x1="154" y1="130" x2="190" y2="130" stroke="#94a3b8" stroke-width="3" />
+  <line x1="100" y1="160" x2="100" y2="190" stroke="#94a3b8" stroke-width="3" />
+  <line x1="46" y1="130" x2="10" y2="130" stroke="#94a3b8" stroke-width="3" />
+  <line x1="46" y1="70" x2="10" y2="70" stroke="#94a3b8" stroke-width="3" />
+  
+  <circle cx="100" cy="10" r="6" fill="#c79e2b" />
+  <circle cx="190" cy="70" r="6" fill="#c79e2b" />
+  <circle cx="190" cy="130" r="6" fill="#c79e2b" />
+  <circle cx="100" cy="190" r="6" fill="#c79e2b" />
+  <circle cx="10" cy="130" r="6" fill="#c79e2b" />
+  <circle cx="10" cy="70" r="6" fill="#c79e2b" />
+  
+  <path d="M70,85 L100,100 L130,85 L130,115 L100,130 L70,115 Z" fill="none" stroke="#f8fafc" stroke-width="3" />
+  <circle cx="100" cy="100" r="8" fill="#f8fafc" />
+</svg>

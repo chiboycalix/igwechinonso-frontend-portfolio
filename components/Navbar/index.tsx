@@ -67,8 +67,8 @@ const NavbarComponent = () => {
   }, []);
 
   return (
-    <Navbar className="backdrop-filter backdrop-blur-2xl fixed top-0 left-0 z-[90000] px-[1rem] xl:px-[5rem] py-4 max-w-full rounded-none shadow-md border-none dark:bg-[#0F151B] bg-white bg-opacity-70">
-      <div className="flex items-center justify-between max-w-[1280px] mx-auto">
+    <Navbar className="backdrop-filter backdrop-blur-2xl fixed top-0 left-0 z-[90000] custom-wrapper py-4 max-w-full rounded-none shadow-md border-none dark:bg-[#0F151B] bg-white bg-opacity-70">
+      <div className="flex items-center justify-between mx-auto">
         <LogoComponent />
         <div className="hidden md:block">
           <NavList isDarkMode={isDarkMode} currentPath={currentPath} />

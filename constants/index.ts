@@ -68,12 +68,12 @@ const links = [
     path: "/works",
     exact: false,
   },
-  {
-    id: 3,
-    name: "Blog",
-    path: "/blogs",
-    exact: false,
-  },
+  // {
+  //   id: 3,
+  //   name: "Blog",
+  //   path: "/blogs",
+  //   exact: false,
+  // },
   {
     id: 4,
     name: "Service",

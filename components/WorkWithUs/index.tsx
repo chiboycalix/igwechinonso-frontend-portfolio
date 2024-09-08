@@ -5,6 +5,7 @@ import { motion, useAnimation } from 'framer-motion';
 import Title from '@/components/Title'
 import Paragraph from '../Paragraph';
 import Button from '../Button';
+import { useRouter } from 'next/navigation';
 
 const getRandomDelay = (min: number, max: number) => {
   return Math.random() * (max - min) + min;
@@ -41,6 +42,7 @@ const Shape: React.FC<{ className: string }> = ({ className }) => {
 };
 
 const WorkWithUs: NextPage = () => {
+  const router = useRouter()
   return (
     <div className="custom-wrapper relative min-h-[400px] mb-[5rem] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
@@ -88,7 +90,9 @@ const WorkWithUs: NextPage = () => {
           />
           <Paragraph as="p" size='medium' text="Let's collaborate and bring your ideas to life. Whether it's a website, app, or digital experience, I'm here to help you succeed." className="mb-8 max-w-md" />
         </motion.div>
-        <div className='mx-auto sm:max-w-[30%] w-full'><Button caption="Let's Connect" className='' /></div>
+        <div className='mx-auto sm:max-w-[30%] w-full'>
+          <Button caption="Let's Connect" className='' onClick={() => router.push("/contact")} />
+        </div>
       </motion.div>
     </div>
   );
