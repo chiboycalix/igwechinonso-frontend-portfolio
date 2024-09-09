@@ -186,7 +186,7 @@ export const Project = ({ project }: ProjectProps) => {
           className='my-3'
         />
         <div className='flex items-center justify-between'>
-          <Link href={githubRepo} target='_blank' className='px-3 py-[2px] rounded font-bold flex items-center cursor-pointer gap-1'>
+          <Link href={githubRepo} target='_blank' className='py-[2px] rounded font-bold flex items-center cursor-pointer gap-1'>
             <Image src={isDarkMode ? GithubDark : GithubLight} alt={isDarkMode ? GithubDark : GithubLight} className='w-4' />
             <Paragraph
               as="p"
